@@ -1,0 +1,3478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frog (Rana tigrina) - 180 MCQ Master Quiz | Scrutiny Academy</title>
+  <style>
+    :root {
+      --primary: #1976d2;
+      --primary-dark: #0d47a1;
+      --primary-light: #e3f2fd;
+      --accent: #00b0ff;
+      --brand-blue: #a3d9fc;
+      --bg: #f4f7fb;
+      --card-bg: #ffffff;
+      --text: #2c3e50;
+      --text-muted: #607d8b;
+      --correct: #2e7d32;
+      --correct-bg: #e8f5e9;
+      --wrong: #c62828;
+      --wrong-bg: #ffebee;
+      --border: #cfd8dc;
+      --shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      --radius: 14px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding-bottom: 40px;
+    }
+
+    /* Top Brand Bar */
+    .top-header {
+      background: linear-gradient(135deg, #0d47a1, #1976d2, #0288d1);
+      color: #ffffff;
+      padding: 24px 20px 20px;
+      box-shadow: 0 4px 20px rgba(13, 71, 161, 0.25);
+    }
+
+    .header-container {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .logo-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .sa-logo-circle {
+      width: 68px;
+      height: 68px;
+      background: #a3d9fc;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 3px solid #ffffff;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+      flex-shrink: 0;
+    }
+
+    .sa-logo-circle .sa-letters {
+      font-family: "Times New Roman", Georgia, serif;
+      font-size: 26px;
+      font-weight: bold;
+      color: #111111;
+      line-height: 1;
+      margin-bottom: 2px;
+    }
+
+    .sa-logo-circle .sa-subtext {
+      font-family: "Brush Script MT", "Caveat", "Segoe Script", cursive;
+      font-size: 8px;
+      color: #222222;
+      letter-spacing: 0.5px;
+    }
+
+    .header-title-block h1 {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+
+    .header-title-block p {
+      font-size: 14px;
+      color: #e0f2fe;
+      margin-top: 4px;
+    }
+
+    .badge-tag {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-top: 6px;
+    }
+
+    /* Control Panel & Scoreboard */
+    .controls-panel {
+      max-width: 1080px;
+      margin: 20px auto 0;
+      padding: 0 16px;
+    }
+
+    .dashboard-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 18px 24px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      border: 1px solid var(--border);
+    }
+
+    .stats-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .stat-box {
+      text-align: center;
+      min-width: 70px;
+    }
+
+    .stat-val {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .stat-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .timer-val {
+      color: #d84315;
+    }
+
+    .action-controls {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+    }
+
+    select, button {
+      padding: 9px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      background: #ffffff;
+      color: var(--text);
+    }
+
+    select:focus, button:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #ffffff;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid var(--primary);
+      color: var(--primary);
+    }
+
+    .btn-outline:hover {
+      background: var(--primary-light);
+    }
+
+    /* Question Navigator Bar */
+    .nav-strip {
+      max-width: 1080px;
+      margin: 14px auto 0;
+      padding: 0 16px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .filter-pills {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+      max-width: 100%;
+    }
+
+    .filter-pill {
+      background: #e2e8f0;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 16px;
+      font-size: 12px;
+      font-weight: 600;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+
+    .filter-pill.active {
+      background: var(--primary);
+      color: #ffffff;
+    }
+
+    /* Main Container */
+    .main-container {
+      max-width: 1080px;
+      margin: 16px auto;
+      padding: 0 16px;
+    }
+
+    /* Single / List View Cards */
+    .question-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      box-shadow: var(--shadow);
+      margin-bottom: 20px;
+      border: 1px solid var(--border);
+      transition: transform 0.15s ease;
+    }
+
+    .question-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+
+    .q-number-badge {
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      font-weight: 700;
+      font-size: 13px;
+      padding: 4px 12px;
+      border-radius: 6px;
+    }
+
+    .q-section-badge {
+      background: #edf2f7;
+      color: #4a5568;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    .question-text {
+      font-size: 16.5px;
+      font-weight: 600;
+      color: #1a202c;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    .options-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    @media (min-width: 768px) {
+      .options-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .option-btn {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 14px 16px;
+      border-radius: 10px;
+      border: 1.5px solid #e2e8f0;
+      background: #ffffff;
+      text-align: left;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-size: 14px;
+      color: #2d3748;
+      line-height: 1.4;
+      width: 100%;
+    }
+
+    .option-btn:hover:not(.disabled) {
+      border-color: var(--accent);
+      background: #f0f9ff;
+    }
+
+    .option-letter {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #edf2f7;
+      color: #4a5568;
+      font-weight: 700;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .option-btn.selected-correct {
+      border-color: var(--correct);
+      background-color: var(--correct-bg);
+      color: #1b5e20;
+    }
+
+    .option-btn.selected-correct .option-letter {
+      background: var(--correct);
+      color: #ffffff;
+    }
+
+    .option-btn.selected-wrong {
+      border-color: var(--wrong);
+      background-color: var(--wrong-bg);
+      color: #b71c1c;
+    }
+
+    .option-btn.selected-wrong .option-letter {
+      background: var(--wrong);
+      color: #ffffff;
+    }
+
+    .option-btn.reveal-correct {
+      border-color: var(--correct);
+      background-color: #f1f8e9;
+      color: #2e7d32;
+    }
+
+    .option-btn.reveal-correct .option-letter {
+      background: var(--correct);
+      color: #ffffff;
+    }
+
+    .option-btn.disabled {
+      cursor: default;
+    }
+
+    /* Explanation Box */
+    .explanation-box {
+      margin-top: 18px;
+      padding: 14px 18px;
+      border-radius: 10px;
+      background: #f8fafc;
+      border-left: 4px solid var(--primary);
+      font-size: 13.5px;
+      color: #334155;
+      display: none;
+    }
+
+    .explanation-box.visible {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .explanation-title {
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Pagination controls */
+    .pagination-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 24px;
+      padding: 0 6px;
+    }
+
+    /* Grid view modal / quick sheet */
+    .grid-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      padding: 20px;
+    }
+
+    .grid-modal.open {
+      display: flex;
+    }
+
+    .grid-content {
+      background: #ffffff;
+      width: 100%;
+      max-width: 800px;
+      max-height: 85vh;
+      border-radius: 16px;
+      padding: 24px;
+      overflow-y: auto;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+    }
+
+    .grid-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 12px;
+    }
+
+    .q-matrix {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(42px, 1fr));
+      gap: 8px;
+    }
+
+    .matrix-btn {
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 700;
+      border-radius: 8px;
+      border: 1px solid #cbd5e1;
+      background: #f8fafc;
+      cursor: pointer;
+    }
+
+    .matrix-btn.answered-correct {
+      background: #c8e6c9;
+      border-color: #81c784;
+      color: #1b5e20;
+    }
+
+    .matrix-btn.answered-wrong {
+      background: #ffcdd2;
+      border-color: #e57373;
+      color: #b71c1c;
+    }
+
+    .matrix-btn.current {
+      outline: 2px solid var(--primary);
+      outline-offset: 1px;
+    }
+
+    /* FOOTER - Scrutiny Academy Branding, Socials, Free Lectures, Support */
+    .footer-section {
+      margin-top: 50px;
+      background: #ffffff;
+      border-top: 2px solid #e2e8f0;
+      padding: 40px 20px 24px;
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.03);
+    }
+
+    .footer-container {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    @media (min-width: 768px) {
+      .footer-grid {
+        grid-template-columns: 1.3fr 1fr 1fr;
+      }
+    }
+
+    .footer-brand-col {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-logo-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .footer-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: #0d47a1;
+    }
+
+    .footer-tagline {
+      font-size: 13.5px;
+      color: #64748b;
+      line-height: 1.5;
+    }
+
+    .footer-heading {
+      font-size: 15px;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+
+    .social-link-card {
+      display: flex;
+      align-center;
+      gap: 14px;
+      padding: 12px 16px;
+      background: #f8fafc;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      text-decoration: none;
+      color: #1e293b;
+      margin-bottom: 10px;
+      transition: all 0.25s ease;
+    }
+
+    .social-link-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    .social-link-card.yt:hover {
+      background: #fff5f5;
+      border-color: #ffcdd2;
+    }
+
+    .social-link-card.ig:hover {
+      background: #fdf2f8;
+      border-color: #fbcfe8;
+    }
+
+    .social-link-card.email:hover {
+      background: #eff6ff;
+      border-color: #bfdbfe;
+    }
+
+    .icon-box {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .yt-icon-box {
+      background: #ff0000;
+      color: #ffffff;
+    }
+
+    .ig-icon-box {
+      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+      color: #ffffff;
+    }
+
+    .support-icon-box {
+      background: #0288d1;
+      color: #ffffff;
+    }
+
+    .social-link-text .primary-txt {
+      font-weight: 700;
+      font-size: 14px;
+      display: block;
+    }
+
+    .social-link-text .sub-txt {
+      font-size: 12px;
+      color: #64748b;
+      display: block;
+    }
+
+    .footer-bottom-strip {
+      border-top: 1px solid #e2e8f0;
+      padding-top: 20px;
+      text-align: center;
+      font-size: 12.5px;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Header with Scrutiny Academy Branding -->
+  <header class="top-header">
+    <div class="header-container">
+      <div class="logo-wrapper">
+        <div class="sa-logo-circle" title="Scrutiny Academy Logo">
+          <div class="sa-letters">SA</div>
+          <div class="sa-subtext">Scrutiny academy</div>
+        </div>
+        <div class="header-title-block">
+          <h1>Frog (Rana tigrina) — Master Quiz</h1>
+          <p>NCERT Class 11 Biology • Chapter 7 Structural Organisation in Animals (180 MCQs)</p>
+          <span class="badge-tag">Scrutiny Academy Digital Learning</span>
+        </div>
+      </div>
+      <div style="text-align: right;">
+        <button class="btn-outline" style="color: #ffffff; border-color: rgba(255,255,255,0.6);" onclick="openGridModal()">Question Palette (1-180)</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Controls & Stats Panel -->
+  <section class="controls-panel">
+    <div class="dashboard-card">
+      <div class="stats-group">
+        <div class="stat-box">
+          <div class="stat-val" id="stat-total">180</div>
+          <div class="stat-label">Total MCQs</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-val" id="stat-answered" style="color: #0288d1;">0</div>
+          <div class="stat-label">Answered</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-val" id="stat-correct" style="color: #2e7d32;">0</div>
+          <div class="stat-label">Correct</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-val" id="stat-wrong" style="color: #c62828;">0</div>
+          <div class="stat-label">Incorrect</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-val" id="stat-score" style="color: #7b1fa2;">0%</div>
+          <div class="stat-label">Accuracy</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-val timer-val" id="quiz-timer">00:00</div>
+          <div class="stat-label">Time</div>
+        </div>
+      </div>
+
+      <div class="action-controls">
+        <select id="section-filter" onchange="filterSection(this.value)">
+          <option value="ALL">All Sections (180 MCQs)</option>
+          <option value="Taxonomy & Habitat">Taxonomy & Habitat (Q1-10)</option>
+          <option value="External Morphology">External Morphology & Skin (Q11-25)</option>
+          <option value="Morphology & Sexual Dimorphism">Limbs & Sexual Dimorphism (Q26-45)</option>
+          <option value="Digestive System">Digestive System & Organs (Q46-70)</option>
+          <option value="Respiratory System">Respiratory System (Q71-85)</option>
+          <option value="Circulatory System">Circulatory & Vascular System (Q91-115)</option>
+          <option value="Excretory System">Excretory System & Osmoregulation (Q116-131)</option>
+          <option value="Control & Coordination">Nervous System & Brain (Q136-149)</option>
+          <option value="Sense Organs">Sense Organs (Q150-155)</option>
+          <option value="Male Reproductive System">Male Reproductive System (Q156-162)</option>
+          <option value="Female Reproductive System">Female Reproductive System (Q163-165)</option>
+          <option value="Development & Metamorphosis">Development & Metamorphosis (Q166-172)</option>
+          <option value="Ecological & Economic Importance">Ecological & Economic Role (Q173-176)</option>
+        </select>
+        <button class="btn-outline" onclick="toggleViewMode()" id="view-mode-btn">View: Single Question</button>
+        <button class="btn-primary" onclick="resetQuiz()">Reset Quiz</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Navigation & Category Pills -->
+  <div class="nav-strip">
+    <div class="filter-pills" id="quick-pills">
+      <button class="filter-pill active" onclick="filterSection('ALL')">All (180)</button>
+      <button class="filter-pill" onclick="filterSection('Taxonomy & Habitat')">Taxonomy</button>
+      <button class="filter-pill" onclick="filterSection('External Morphology')">Morphology</button>
+      <button class="filter-pill" onclick="filterSection('Digestive System')">Digestion</button>
+      <button class="filter-pill" onclick="filterSection('Respiratory System')">Respiration</button>
+      <button class="filter-pill" onclick="filterSection('Circulatory System')">Circulation</button>
+      <button class="filter-pill" onclick="filterSection('Excretory System')">Excretion</button>
+      <button class="filter-pill" onclick="filterSection('Control & Coordination')">Nervous</button>
+      <button class="filter-pill" onclick="filterSection('Sense Organs')">Sense Organs</button>
+      <button class="filter-pill" onclick="filterSection('Male Reproductive System')">Male Repro</button>
+      <button class="filter-pill" onclick="filterSection('Female Reproductive System')">Female Repro</button>
+      <button class="filter-pill" onclick="filterSection('Development & Metamorphosis')">Metamorphosis</button>
+    </div>
+    <div id="q-counter-display" style="font-size: 13px; font-weight: 600; color: #475569;">
+      Question <span id="current-q-idx">1</span> of <span id="total-visible-q">180</span>
+    </div>
+  </div>
+
+  <!-- Questions Container -->
+  <main class="main-container" id="quiz-container">
+    <!-- Questions injected dynamically by JavaScript -->
+  </main>
+
+  <!-- Pagination Bar (Single Question Mode) -->
+  <div class="pagination-bar main-container" id="pagination-controls">
+    <button class="btn-outline" onclick="prevQuestion()" id="prev-btn">Previous</button>
+    <button class="btn-outline" onclick="openGridModal()">All Questions (Palette)</button>
+    <button class="btn-primary" onclick="nextQuestion()" id="next-btn">Next</button>
+  </div>
+
+  <!-- Question Palette Modal -->
+  <div class="grid-modal" id="gridModal" onclick="closeGridModalOnBackdrop(event)">
+    <div class="grid-content">
+      <div class="grid-header">
+        <div>
+          <h3 style="font-size: 18px; font-weight: 700;">Question Palette (180 MCQs)</h3>
+          <p style="font-size: 12px; color: #64748b;">Jump directly to any question. Green = Correct, Red = Incorrect, Gray = Unanswered.</p>
+        </div>
+        <button class="btn-outline" onclick="closeGridModal()">Close</button>
+      </div>
+      <div class="q-matrix" id="question-matrix">
+        <!-- Buttons 1 to 180 injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer with required Scrutiny Academy branding, YouTube, Instagram, and Support -->
+  <footer class="footer-section">
+    <div class="footer-container">
+      <div class="footer-grid">
+        
+        <!-- Col 1: Academy Branding -->
+        <div class="footer-brand-col">
+          <div class="footer-logo-row">
+            <div class="sa-logo-circle" style="width: 54px; height: 54px;">
+              <div class="sa-letters" style="font-size: 20px;">SA</div>
+              <div class="sa-subtext" style="font-size: 6.5px;">Scrutiny academy</div>
+            </div>
+            <div>
+              <div class="footer-title">Scrutiny Academy</div>
+              <div style="font-size: 12px; font-weight: 600; color: #0288d1;">Digital Learning</div>
+            </div>
+          </div>
+          <p class="footer-tagline">
+            Specialized digital learning, test series, and comprehensive study materials for Class 11, Class 12, and NEET UG Biology. High-yield concept clarity, line-by-line NCERT reviews, and interactive question banks.
+          </p>
+        </div>
+
+        <!-- Col 2: Social Media & Free Lectures -->
+        <div>
+          <div class="footer-heading">Follow & Watch Free Lectures</div>
+          
+          <!-- YouTube Channel Link -->
+          <a href="https://youtube.com/@scrutinyacademy?si=adnMDtsgDLpcpK7j" target="_blank" rel="noopener noreferrer" class="social-link-card yt" title="Watch Free Lectures on YouTube">
+            <div class="icon-box yt-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+            </div>
+            <div class="social-link-text">
+              <span class="primary-txt">YouTube: @Scrutinyacademy</span>
+              <span class="sub-txt">Click here to watch free lectures</span>
+            </div>
+          </a>
+
+          <!-- Instagram Link -->
+          <a href="https://instagram.com/Scrutinyacademy" target="_blank" rel="noopener noreferrer" class="social-link-card ig" title="Follow Scrutiny Academy on Instagram">
+            <div class="icon-box ig-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </div>
+            <div class="social-link-text">
+              <span class="primary-txt">Instagram: @Scrutinyacademy</span>
+              <span class="sub-txt">follow for more updates</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Col 3: Student Support & Contact -->
+        <div>
+          <div class="footer-heading">Student Support & Helpdesk</div>
+          
+          <a href="mailto:Scrutinyacademy@gmail.com" class="social-link-card email" title="Email Scrutiny Academy Support">
+            <div class="icon-box support-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <div class="social-link-text">
+              <span class="primary-txt">Support: Scrutinyacademy@gmail.com</span>
+              <span class="sub-txt">Email us for doubts & study materials</span>
+            </div>
+          </a>
+
+          <div style="font-size: 12.5px; color: #64748b; margin-top: 12px; line-height: 1.4;">
+            Have questions about questions or NCERT explanations? Reach out to our academic team anytime!
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Copyright -->
+      <div class="footer-bottom-strip">
+        © 2026 Scrutiny Academy Digital Learning • NCERT Biology Class 11 (Frog - Rana tigrina Master Review)
+      </div>
+    </div>
+  </footer>
+
+  <!-- Quiz Data and Interactive Engine -->
+  <script>
+    const questionsData = [
+  {
+    "id": 1,
+    "section": "Taxonomy & Habitat",
+    "question": "To which class and phylum does the common Indian frog belong?",
+    "options": [
+      "Class Reptilia, Phylum Chordata",
+      "Class Amphibia, Phylum Chordata",
+      "Class Pisces, Phylum Chordata",
+      "Class Amphibia, Phylum Arthropoda"
+    ],
+    "answer": 1,
+    "explanation": "Frogs belong to Class Amphibia of Phylum Chordata. They can live both on land and in freshwater."
+  },
+  {
+    "id": 2,
+    "section": "Taxonomy & Habitat",
+    "question": "What is the scientific name of the most common species of frog found in India?",
+    "options": [
+      "Bufo melanostictus",
+      "Rana tigrina",
+      "Hyla arborea",
+      "Salamandra atra"
+    ],
+    "answer": 1,
+    "explanation": "The most common species of frog found in India is Rana tigrina."
+  },
+  {
+    "id": 3,
+    "section": "Taxonomy & Habitat",
+    "question": "Frogs are poikilothermic animals, which means:",
+    "options": [
+      "They maintain a constant internal core body temperature",
+      "Their body temperature varies with the temperature of the environment",
+      "They are strictly warm-blooded homeotherms",
+      "They can only survive in marine habitats"
+    ],
+    "answer": 1,
+    "explanation": "Frogs are cold-blooded or poikilotherms, meaning their body temperature varies with the temperature of the external environment."
+  },
+  {
+    "id": 4,
+    "section": "Taxonomy & Habitat",
+    "question": "The phenomenon by which a frog changes its skin colour to blend with its surroundings and evade predators is known as:",
+    "options": [
+      "Metagenesis",
+      "Camouflage (mimicry)",
+      "Metamorphosis",
+      "Ecdysis"
+    ],
+    "answer": 1,
+    "explanation": "Frogs have the ability to change their colour to hide them from their enemies (camouflage). This protective coloration is called mimicry."
+  },
+  {
+    "id": 5,
+    "section": "Taxonomy & Habitat",
+    "question": "The protective coloration shown by frogs to conceal themselves in grass and foliage is scientifically termed:",
+    "options": [
+      "Mimicry",
+      "Mutualism",
+      "Commensalism",
+      "Bioluminescence"
+    ],
+    "answer": 0,
+    "explanation": "According to NCERT, the protective coloration exhibited by frogs to hide from predators is called mimicry."
+  },
+  {
+    "id": 6,
+    "section": "Taxonomy & Habitat",
+    "question": "During peak winter and peak summer, frogs are not seen on the ground because they undergo:",
+    "options": [
+      "Migration to oceanic waters",
+      "Deep sleep in burrows (hibernation and aestivation respectively)",
+      "Continuous reproduction in open ponds",
+      "Moult of their entire skeleton"
+    ],
+    "answer": 1,
+    "explanation": "Frogs take shelter in deep burrows to protect themselves from extreme heat and cold. Summer sleep is aestivation and winter sleep is hibernation."
+  },
+  {
+    "id": 7,
+    "section": "Taxonomy & Habitat",
+    "question": "'Summer sleep' in frog is technically referred to as:",
+    "options": [
+      "Hibernation",
+      "Aestivation",
+      "Diapause",
+      "Quiescence"
+    ],
+    "answer": 1,
+    "explanation": "Summer sleep in frogs to avoid harsh dry and hot conditions is termed aestivation."
+  },
+  {
+    "id": 8,
+    "section": "Taxonomy & Habitat",
+    "question": "'Winter sleep' in frog is scientifically known as:",
+    "options": [
+      "Aestivation",
+      "Hibernation",
+      "Regeneration",
+      "Parthenogenesis"
+    ],
+    "answer": 1,
+    "explanation": "Winter sleep in frogs to escape low freezing temperatures is known as hibernation."
+  },
+  {
+    "id": 9,
+    "section": "Taxonomy & Habitat",
+    "question": "Where do frogs take shelter during periods of hibernation and aestivation?",
+    "options": [
+      "On tree branches",
+      "In deep subterranean burrows",
+      "In fast-flowing rivers",
+      "Inside bird nests"
+    ],
+    "answer": 1,
+    "explanation": "Frogs take shelter in deep burrows to protect themselves from extreme heat during summer and cold during winter."
+  },
+  {
+    "id": 10,
+    "section": "Taxonomy & Habitat",
+    "question": "Which of the following environments is NOT a natural habitat for Rana tigrina?",
+    "options": [
+      "Freshwater ponds",
+      "Damp terrestrial soil",
+      "Marine sea water",
+      "Marshy wetlands"
+    ],
+    "answer": 2,
+    "explanation": "Amphibians like Rana tigrina live in freshwater and on land; they cannot survive in hypertonic marine (sea) water."
+  },
+  {
+    "id": 11,
+    "section": "External Morphology",
+    "question": "The skin of a frog feels smooth and slippery primarily due to the presence of:",
+    "options": [
+      "Epidermal scales",
+      "Mucus secretion",
+      "Exoskeletal plates",
+      "Dense hair follicles"
+    ],
+    "answer": 1,
+    "explanation": "The skin of a frog is smooth and slippery due to the presence of mucus secreted by cutaneous mucus glands."
+  },
+  {
+    "id": 12,
+    "section": "External Morphology",
+    "question": "Regarding moisture, the skin of a healthy live frog is:",
+    "options": [
+      "Always maintained in a moist condition",
+      "Completely dry and cornified like reptiles",
+      "Covered with waterproof oily feathers",
+      "Calcified into a hard carapace"
+    ],
+    "answer": 0,
+    "explanation": "The skin is always maintained in a moist condition to facilitate cutaneous gas exchange."
+  },
+  {
+    "id": 13,
+    "section": "External Morphology",
+    "question": "What is the typical colour of the dorsal side of the skin in Rana tigrina?",
+    "options": [
+      "Uniformly pale yellow",
+      "Olive green with dark irregular spots",
+      "Bright red with black bands",
+      "Silvery white without any spots"
+    ],
+    "answer": 1,
+    "explanation": "The colour of the dorsal side of body is generally olive green with dark irregular spots."
+  },
+  {
+    "id": 14,
+    "section": "External Morphology",
+    "question": "What is the characteristic colouration of the ventral surface of a frog's body?",
+    "options": [
+      "Olive green with dark spots",
+      "Uniformly pale yellow",
+      "Dark brownish black",
+      "Bright orange with blue spots"
+    ],
+    "answer": 1,
+    "explanation": "On the ventral side, the skin is uniformly pale yellow."
+  },
+  {
+    "id": 15,
+    "section": "External Morphology",
+    "question": "How does a frog take in water to maintain its internal hydration?",
+    "options": [
+      "It drinks water continuously through its mouth",
+      "It absorbs water directly through its skin",
+      "It acquires water exclusively from digested insect food",
+      "It condenses moisture through pulmonary alveoli"
+    ],
+    "answer": 1,
+    "explanation": "The frog never drinks water; instead, it absorbs water directly through its permeable skin."
+  },
+  {
+    "id": 16,
+    "section": "External Morphology",
+    "question": "The body of a frog is morphologically divided into which two distinct regions?",
+    "options": [
+      "Head, neck, and trunk",
+      "Head and trunk only",
+      "Head, thorax, and abdomen",
+      "Cephalothorax and abdomen"
+    ],
+    "answer": 1,
+    "explanation": "The body of a frog is divisible into head and trunk. A neck and tail are completely absent."
+  },
+  {
+    "id": 17,
+    "section": "External Morphology",
+    "question": "Which of the following anatomical structures are entirely ABSENT in an adult frog?",
+    "options": [
+      "Head and eyes",
+      "Neck and tail",
+      "Trunk and limbs",
+      "Nostrils and mouth"
+    ],
+    "answer": 1,
+    "explanation": "In an adult frog, a neck and tail are absent."
+  },
+  {
+    "id": 18,
+    "section": "External Morphology",
+    "question": "A pair of nostrils in a frog is positioned:",
+    "options": [
+      "Below the ventral mouth",
+      "Above the mouth on the dorsal tip of the snout",
+      "Inside the buccal cavity floor",
+      "Behind the tympanum"
+    ],
+    "answer": 1,
+    "explanation": "Above the mouth, a pair of external nostrils is present near the anterior tip of the snout."
+  },
+  {
+    "id": 19,
+    "section": "External Morphology",
+    "question": "The eyes of a frog are described as:",
+    "options": [
+      "Deeply sunken and covered by opaque scales",
+      "Bulged and protected by a nictitating membrane while in water",
+      "Compound eyes with thousands of ommatidia",
+      "Rudimentary and non-functional in adult stage"
+    ],
+    "answer": 1,
+    "explanation": "Eyes are bulged and covered by a nictitating membrane that protects them while the frog is underwater."
+  },
+  {
+    "id": 20,
+    "section": "External Morphology",
+    "question": "What is the primary function of the transparent nictitating membrane in a frog?",
+    "options": [
+      "Focusing on distant aerial insects",
+      "Protecting the eyes while the frog is in water",
+      "Detecting sound vibrations in air",
+      "Secreting lubricating mucus for the tongue"
+    ],
+    "answer": 1,
+    "explanation": "The nictitating membrane protects the bulged eyes from silt, water, and debris while submerged."
+  },
+  {
+    "id": 21,
+    "section": "External Morphology",
+    "question": "On either side of the eyes, a circular membranous structure is present called the:",
+    "options": [
+      "Operculum",
+      "Tympanum",
+      "Pinna",
+      "Spiracle"
+    ],
+    "answer": 1,
+    "explanation": "On either side of eyes, a membranous tympanum (ear) receives sound signals."
+  },
+  {
+    "id": 22,
+    "section": "External Morphology",
+    "question": "Which auditory structure found in mammals is completely absent in frogs?",
+    "options": [
+      "Internal ear",
+      "Tympanic membrane",
+      "External ear (pinna)",
+      "Auditory nerve"
+    ],
+    "answer": 2,
+    "explanation": "In frogs, an external ear (pinna) is absent; only the tympanum can be seen externally."
+  },
+  {
+    "id": 23,
+    "section": "External Morphology",
+    "question": "The membranous tympanum in frog performs the function of receiving:",
+    "options": [
+      "Chemical olfactory signals",
+      "Sound signals and acoustic vibrations",
+      "Visible polarized light rays",
+      "Thermal infrared gradients"
+    ],
+    "answer": 1,
+    "explanation": "The membranous tympanum receives sound signals from the environment."
+  },
+  {
+    "id": 24,
+    "section": "External Morphology",
+    "question": "The appendages of a frog consist of:",
+    "options": [
+      "Forelimbs only",
+      "Forelimbs and hindlimbs",
+      "Three pairs of thoracic legs",
+      "A muscular tail and pelvic fins"
+    ],
+    "answer": 1,
+    "explanation": "The limbs consist of a pair of forelimbs and a pair of hindlimbs."
+  },
+  {
+    "id": 25,
+    "section": "External Morphology",
+    "question": "The forelimbs and hindlimbs of a frog assist in which locomotive functions?",
+    "options": [
+      "Swimming, walking, leaping, and burrowing",
+      "Flying and gliding through tree canopies",
+      "Grasping prey with sharp opposable claws",
+      "Perching on high electric wires"
+    ],
+    "answer": 0,
+    "explanation": "Limbs help in swimming, walking, leaping, and burrowing."
+  },
+  {
+    "id": 26,
+    "section": "Morphology & Sexual Dimorphism",
+    "question": "Comparing the two pairs of limbs in a frog, the hindlimbs are:",
+    "options": [
+      "Much smaller and weaker than forelimbs",
+      "Larger, longer, and more muscular than forelimbs",
+      "Equally sized and identical in digit count",
+      "Modified into non-functional rudiments"
+    ],
+    "answer": 1,
+    "explanation": "The hindlimbs are larger and more muscular than the forelimbs and end in five digits."
+  },
+  {
+    "id": 27,
+    "section": "Morphology & Sexual Dimorphism",
+    "question": "How many digits are present on the foot of a frog's forelimb and hindlimb respectively?",
+    "options": [
+      "5 on forelimb and 4 on hindlimb",
+      "4 on forelimb and 5 on hindlimb",
+      "5 on forelimb and 5 on hindlimb",
+      "4 on forelimb and 4 on hindlimb"
+    ],
+    "answer": 1,
+    "explanation": "Forelimbs end in four digits, while hindlimbs end in five digits."
+  },
+  {
+    "id": 28,
+    "section": "Morphology & Sexual Dimorphism",
+    "question": "The feet of the hindlimbs in frogs feature webbed digits that primarily help in:",
+    "options": [
+      "Leaping high in air",
+      "Swimming in water",
+      "Climbing vertical rocks",
+      "Catching flying insects"
+    ],
+    "answer": 1,
+    "explanation": "Feet have webbed digits that help in swimming by providing propulsion against water."
+  },
+  {
+    "id": 29,
+    "section": "Morphology & Sexual Dimorphism",
+    "question": "Frogs exhibit sexual dimorphism. Male frogs can be distinguished externally from females by the presence of:",
+    "options": [
+      "Bright red eyes and longer claws",
+      "Sound-producing vocal sacs and a copulatory pad on the first digit of forelimbs",
+      "A prominent muscular tail and broad carapace",
+      "Mammary glands and external ears"
+    ],
+    "answer": 1,
+    "explanation": "Male frogs can be distinguished by the presence of sound-producing vocal sacs and also a copulatory pad on the first digit of the forelimbs which are absent in female frogs."
+  },
+  {
+    "id": 30,
+    "section": "Morphology & Sexual Dimorphism",
+    "question": "The sound-producing vocal sacs in male frogs function to:",
+    "options": [
+      "Attract prey during winter",
+      "Amplify mating croaks to attract females during breeding season",
+      "Store excess oxygen during diving",
+      "Assist in vocal echolocation like bats"
+    ],
+    "answer": 1,
+    "explanation": "Vocal sacs act as resonators to amplify the croaking sound of male frogs to attract female frogs during the breeding season."
+  },
+  {
+    "id": 31,
+    "section": "Morphology & Sexual Dimorphism",
+    "question": "On which digit of the forelimb is the copulatory (nuptial) pad located in a male frog?",
+    "options": [
+      "First digit",
+      "Second digit",
+      "Third digit",
+      "Fourth digit"
+    ],
+    "answer": 0,
+    "explanation": "The copulatory pad is situated on the ventral surface of the first digit of the forelimbs in male frogs."
+  },
+  {
+    "id": 32,
+    "section": "Morphology & Sexual Dimorphism",
+    "question": "What is the biological function of the copulatory pad in male frogs during amplexus?",
+    "options": [
+      "Injecting venom into the female",
+      "Firmly gripping the slippery body of the female during mating",
+      "Digging burrows in hard mud",
+      "Transferring spermatophores internally"
+    ],
+    "answer": 1,
+    "explanation": "The copulatory pad helps the male firmly grip the female during amplexus in water."
+  },
+  {
+    "id": 33,
+    "section": "Morphology & Sexual Dimorphism",
+    "question": "Which of the following structures is entirely ABSENT in a female frog?",
+    "options": [
+      "Tympanum and eyes",
+      "Nictitating membrane",
+      "Vocal sacs and copulatory pads",
+      "Forelimbs with four digits"
+    ],
+    "answer": 2,
+    "explanation": "Vocal sacs and copulatory pads on the first digit of the forelimbs are absent in female frogs."
+  },
+  {
+    "id": 34,
+    "section": "Morphology & Sexual Dimorphism",
+    "question": "Are claws present on the digits of a frog's limbs?",
+    "options": [
+      "Yes, sharp curved claws are present on all digits",
+      "No, digits are entirely clawless",
+      "Claws are present only on the hindlimbs",
+      "Claws are present exclusively in females"
+    ],
+    "answer": 1,
+    "explanation": "Amphibian digits, including those of frogs, are clawless."
+  },
+  {
+    "id": 35,
+    "section": "Morphology & Sexual Dimorphism",
+    "question": "The web between the digits of a frog's foot is formed by an extension of:",
+    "options": [
+      "Skin folds",
+      "Bone splints",
+      "Cartilage rods",
+      "Tendon sheets"
+    ],
+    "answer": 0,
+    "explanation": "The web in the hind feet consists of thin skin folds connecting adjacent digits."
+  },
+  {
+    "id": 36,
+    "section": "Morphology & Sexual Dimorphism",
+    "question": "Which of the following statements is INCORRECT regarding the morphology of Rana tigrina?",
+    "options": [
+      "The eyes are situated in orbits in the skull",
+      "A neck is present between the head and trunk",
+      "External ear is absent, only tympanum is visible",
+      "A pair of external nostrils is present above the mouth"
+    ],
+    "answer": 1,
+    "explanation": "A neck is completely absent in frogs; the head is directly attached to the trunk."
+  },
+  {
+    "id": 37,
+    "section": "Morphology & Sexual Dimorphism",
+    "question": "During terrestrial locomotion, leaping is primarily powered by the vigorous extension of:",
+    "options": [
+      "Forelimbs",
+      "Hindlimbs",
+      "Vocal sacs",
+      "Pectoral girdle"
+    ],
+    "answer": 1,
+    "explanation": "The long, powerful, muscular hindlimbs generate the propulsive force for leaping."
+  },
+  {
+    "id": 38,
+    "section": "Morphology & Sexual Dimorphism",
+    "question": "Skin respiration in frog requires the skin to remain:",
+    "options": [
+      "Dry and heavily keratinized",
+      "Moist, vascular, and permeable",
+      "Covered with waterproof scales",
+      "Chitinous and impermeable"
+    ],
+    "answer": 1,
+    "explanation": "Cutaneous respiration relies on a moist, vascularized, and thin permeable skin surface for gaseous diffusion."
+  },
+  {
+    "id": 39,
+    "section": "Morphology & Sexual Dimorphism",
+    "question": "The throat of a male frog often appears darker during breeding season due to:",
+    "options": [
+      "Enlarged vocal sacs",
+      "Melanoma development",
+      "Gastric ulceration",
+      "Loss of mucus glands"
+    ],
+    "answer": 0,
+    "explanation": "The presence and expansion of bluish-pigmented vocal sacs in male frogs often make the throat look darker."
+  },
+  {
+    "id": 40,
+    "section": "Morphology & Sexual Dimorphism",
+    "question": "Which part of a frog's body directly receives mechanical sound waves from the atmosphere?",
+    "options": [
+      "Cochlea",
+      "Tympanum",
+      "Nictitating membrane",
+      "Vomerine teeth"
+    ],
+    "answer": 1,
+    "explanation": "The external membranous tympanum receives sound waves directly from the atmosphere."
+  },
+  {
+    "id": 41,
+    "section": "Morphology & Sexual Dimorphism",
+    "question": "The absence of neck in frogs is an evolutionary adaptation that:",
+    "options": [
+      "Prevents swimming in water",
+      "Streamlines the body for jumping, diving, and burrowing",
+      "Reduces blood flow to the brain",
+      "Eliminates the spinal cord"
+    ],
+    "answer": 1,
+    "explanation": "The absence of a neck provides a compact, streamlined body shape that facilitates forward leaping and diving into water."
+  },
+  {
+    "id": 42,
+    "section": "Morphology & Sexual Dimorphism",
+    "question": "Which digit is missing on the forelimb of a frog?",
+    "options": [
+      "The pollex (thumb)",
+      "The second digit",
+      "The fourth digit",
+      "The fifth digit"
+    ],
+    "answer": 0,
+    "explanation": "The forelimb of a frog has four digits; the inner digit (pollex/thumb) is suppressed or rudimentary."
+  },
+  {
+    "id": 43,
+    "section": "Morphology & Sexual Dimorphism",
+    "question": "In water, frog keeps its nostrils:",
+    "options": [
+      "Submerged at the bottom",
+      "Above the water surface while floating to breathe air",
+      "Permanently open to swallow water",
+      "Plugged with mucus permanently"
+    ],
+    "answer": 1,
+    "explanation": "When floating on the surface of water, the elevated position of the nostrils and eyes allows the frog to breathe and see while mostly submerged."
+  },
+  {
+    "id": 44,
+    "section": "Morphology & Sexual Dimorphism",
+    "question": "The mucus that keeps the skin of the frog moist is secreted by:",
+    "options": [
+      "Sebaceous glands",
+      "Mucus glands situated in the skin",
+      "Sweat glands",
+      "Salivary glands"
+    ],
+    "answer": 1,
+    "explanation": "Numerous cutaneous mucus glands in the skin continuously secrete mucus to keep it slippery and moist."
+  },
+  {
+    "id": 45,
+    "section": "Morphology & Sexual Dimorphism",
+    "question": "Which feature of frog skin prevents excessive desiccation when on land?",
+    "options": [
+      "A thick layer of dead stratum corneum with scales",
+      "Continuous mucus secretion and behavior of staying in damp habitats",
+      "Impermeable keratinous armor",
+      "Heavy subcutaneous fat blubber"
+    ],
+    "answer": 1,
+    "explanation": "Continuous secretion of mucus from skin glands and habituating damp, shaded areas near water prevent the frog from desiccating."
+  },
+  {
+    "id": 46,
+    "section": "Digestive System",
+    "question": "The body cavity of a frog accommodates which organ systems?",
+    "options": [
+      "Digestive and respiratory systems only",
+      "Circulatory and excretory systems only",
+      "Digestive, circulatory, respiratory, nervous, excretory, and reproductive systems",
+      "Only digestive and reproductive systems"
+    ],
+    "answer": 2,
+    "explanation": "The body cavity of frog accommodates well-developed organ systems: digestive, circulatory, respiratory, nervous, excretory, and reproductive systems."
+  },
+  {
+    "id": 47,
+    "section": "Digestive System",
+    "question": "The digestive system of a frog consists of:",
+    "options": [
+      "Alimentary canal only",
+      "Digestive glands only",
+      "Alimentary canal and digestive glands",
+      "Gastrovascular cavity only"
+    ],
+    "answer": 2,
+    "explanation": "The digestive system consists of an alimentary canal and digestive glands."
+  },
+  {
+    "id": 48,
+    "section": "Digestive System",
+    "question": "Why is the alimentary canal of a frog relatively short in length?",
+    "options": [
+      "Because frogs are herbivores",
+      "Because frogs are carnivores and the length of intestine is reduced",
+      "Because frogs lack a stomach",
+      "Because frogs have a very long oesophagus"
+    ],
+    "answer": 1,
+    "explanation": "The alimentary canal is short because frogs are carnivores and hence the length of intestine is reduced."
+  },
+  {
+    "id": 49,
+    "section": "Digestive System",
+    "question": "The mouth of a frog opens anteriorly into the:",
+    "options": [
+      "Oesophagus directly",
+      "Buccal cavity",
+      "Stomach",
+      "Duodenum"
+    ],
+    "answer": 1,
+    "explanation": "The mouth opens into the buccal cavity that leads to the oesophagus through pharynx."
+  },
+  {
+    "id": 50,
+    "section": "Digestive System",
+    "question": "The tongue of a frog is characteristically:",
+    "options": [
+      "Unlobed and fixed to the back of the pharynx",
+      "Bilobed and attached at the front of the buccal floor",
+      "Cylindrical with sharp teeth on its tip",
+      "Absent in adult frogs"
+    ],
+    "answer": 1,
+    "explanation": "Frog has a bilobed tongue attached at the anterior end of the lower jaw, which can be flicked out to capture prey."
+  },
+  {
+    "id": 51,
+    "section": "Digestive System",
+    "question": "How does a frog use its bilobed tongue to catch prey?",
+    "options": [
+      "By curling it into a tube to suck fluids",
+      "By rapidly flipping it out to stick to the prey and retracting it into the mouth",
+      "By spewing venom onto the prey",
+      "By chewing the prey outside the mouth"
+    ],
+    "answer": 1,
+    "explanation": "The sticky, bilobed tongue is thrown out rapidly to capture insects and other small prey, then folded back into the mouth."
+  },
+  {
+    "id": 52,
+    "section": "Digestive System",
+    "question": "In the mouth of a frog, teeth are present on the:",
+    "options": [
+      "Both upper and lower jaws",
+      "Upper jaw and vomer bones (vomerine teeth)",
+      "Lower jaw only",
+      "Tongue surface exclusively"
+    ],
+    "answer": 1,
+    "explanation": "Teeth in frog are present on the upper jaw (maxillary teeth) and on the roof of the buccal cavity (vomerine teeth); the lower jaw is toothless."
+  },
+  {
+    "id": 53,
+    "section": "Digestive System",
+    "question": "The primary function of teeth in a frog is to:",
+    "options": [
+      "Chew and masticate food thoroughly",
+      "Hold and prevent the captured prey from slipping away",
+      "Grind cellulose plant fibers",
+      "Crush hard seed coats"
+    ],
+    "answer": 1,
+    "explanation": "Frogs do not chew their food; their small homodont teeth serve only to hold the slippery struggling prey."
+  },
+  {
+    "id": 54,
+    "section": "Digestive System",
+    "question": "The buccal cavity leads into the oesophagus through the:",
+    "options": [
+      "Larynx",
+      "Pharynx",
+      "Trachea",
+      "Glottis"
+    ],
+    "answer": 1,
+    "explanation": "The buccal cavity leads to the oesophagus through the pharynx."
+  },
+  {
+    "id": 55,
+    "section": "Digestive System",
+    "question": "The oesophagus of a frog is a:",
+    "options": [
+      "Very long coiled muscular tube",
+      "Short tube that opens into the stomach",
+      "Spacious storage chamber with teeth",
+      "Structure that bypasses the stomach directly into the intestine"
+    ],
+    "answer": 1,
+    "explanation": "Oesophagus is a short tube that opens into the stomach because the neck is absent."
+  },
+  {
+    "id": 56,
+    "section": "Digestive System",
+    "question": "In a frog, the stomach is located:",
+    "options": [
+      "On the right side of the body cavity",
+      "On the left side of the upper body cavity",
+      "Directly inside the pelvic girdle",
+      "Ventral to the urinary bladder"
+    ],
+    "answer": 1,
+    "explanation": "The stomach is a wide, curved muscular tube situated on the left side in the upper body cavity."
+  },
+  {
+    "id": 57,
+    "section": "Digestive System",
+    "question": "The walls of the stomach in a frog secrete:",
+    "options": [
+      "Bile and insulin",
+      "Gastric juice containing hydrochloric acid (HCl) and proteolytic enzymes",
+      "Pancreatic juice and saliva",
+      "Mucus and cellulase"
+    ],
+    "answer": 1,
+    "explanation": "The walls of the stomach secrete gastric juice which contains HCl and proteolytic enzymes for protein digestion."
+  },
+  {
+    "id": 58,
+    "section": "Digestive System",
+    "question": "Partially digested, acidic, pulpy food produced in the stomach is called:",
+    "options": [
+      "Chyle",
+      "Chyme",
+      "Bolus",
+      "Faeces"
+    ],
+    "answer": 1,
+    "explanation": "Food is partially digested by the action of gastric juice to form a semi-fluid acidic mass called chyme."
+  },
+  {
+    "id": 59,
+    "section": "Digestive System",
+    "question": "Chyme is passed from the stomach into the first part of the intestine, called the:",
+    "options": [
+      "Ileum",
+      "Duodenum",
+      "Rectum",
+      "Cloaca"
+    ],
+    "answer": 1,
+    "explanation": "Chyme is passed from the stomach into the first part of the small intestine, the duodenum."
+  },
+  {
+    "id": 60,
+    "section": "Digestive System",
+    "question": "The small intestine of a frog consists of which two regions?",
+    "options": [
+      "Duodenum and ileum",
+      "Jejunum and colon",
+      "Duodenum and caecum",
+      "Rumen and reticulum"
+    ],
+    "answer": 0,
+    "explanation": "The intestine of a frog consists of the duodenum and ileum."
+  },
+  {
+    "id": 61,
+    "section": "Digestive System",
+    "question": "The duodenum receives bile from the gall bladder and pancreatic juice from the pancreas via:",
+    "options": [
+      "Separate hepatic and pancreatic ducts",
+      "A common bile duct",
+      "The thoracic duct",
+      "The ureter"
+    ],
+    "answer": 1,
+    "explanation": "The duodenum receives bile (from gall bladder) and pancreatic juice (from pancreas) through a common bile duct."
+  },
+  {
+    "id": 62,
+    "section": "Digestive System",
+    "question": "Which organ in the frog secretes bile, and where is it stored?",
+    "options": [
+      "Pancreas secretes bile; stored in liver",
+      "Liver secretes bile; stored in gall bladder",
+      "Gall bladder secretes bile; stored in spleen",
+      "Stomach secretes bile; stored in duodenum"
+    ],
+    "answer": 1,
+    "explanation": "Bile is secreted by the liver and stored in the gall bladder."
+  },
+  {
+    "id": 63,
+    "section": "Digestive System",
+    "question": "What is the primary digestive action of bile in the duodenum?",
+    "options": [
+      "Digesting starch into glucose",
+      "Emulsification of fats",
+      "Breaking down proteins into peptides",
+      "Coagulating milk proteins"
+    ],
+    "answer": 1,
+    "explanation": "Bile emulsifies fat, breaking it into fine droplets for lipase action."
+  },
+  {
+    "id": 64,
+    "section": "Digestive System",
+    "question": "Pancreatic juice in frogs contains digestive enzymes that digest:",
+    "options": [
+      "Only cellulose",
+      "Carbohydrates and proteins",
+      "Lipids exclusively without lipase",
+      "Vitamins and minerals"
+    ],
+    "answer": 1,
+    "explanation": "Pancreatic juice digests carbohydrates and proteins by enzymatic action."
+  },
+  {
+    "id": 65,
+    "section": "Digestive System",
+    "question": "Final digestion of food and absorption of digested nutrients in a frog takes place in the:",
+    "options": [
+      "Stomach",
+      "Intestine (ileum)",
+      "Rectum",
+      "Cloaca"
+    ],
+    "answer": 1,
+    "explanation": "Final digestion takes place in the intestine. Digested food is absorbed by the numerous finger-like folds (villi and microvilli) in the inner wall of intestine."
+  },
+  {
+    "id": 66,
+    "section": "Digestive System",
+    "question": "The inner wall of the frog's intestine has numerous internal folds called:",
+    "options": [
+      "Rugae and gastric pits",
+      "Villi and microvilli",
+      "Alveoli and bronchioles",
+      "Nephrons and collecting ducts"
+    ],
+    "answer": 1,
+    "explanation": "Digested food is absorbed by the numerous finger-like folds (villi and microvilli) in the inner wall of the intestine."
+  },
+  {
+    "id": 67,
+    "section": "Digestive System",
+    "question": "Undigested solid waste from the ileum moves into the ______ and finally passes out through the ______.",
+    "options": [
+      "Duodenum; stomach",
+      "Rectum; cloaca",
+      "Urinary bladder; ureter",
+      "Liver; gall bladder"
+    ],
+    "answer": 1,
+    "explanation": "The undigested solid waste moves into the rectum and passes out through the cloaca."
+  },
+  {
+    "id": 68,
+    "section": "Digestive System",
+    "question": "The cloaca in a frog is a common chamber that receives products from which systems?",
+    "options": [
+      "Digestive and respiratory systems only",
+      "Digestive, excretory, and reproductive systems",
+      "Circulatory and endocrine systems",
+      "Nervous and lymphatic systems"
+    ],
+    "answer": 1,
+    "explanation": "The cloaca is a small, median chamber used to pass faecal matter, urine, and sperms/ova to the exterior."
+  },
+  {
+    "id": 69,
+    "section": "Digestive System",
+    "question": "The terminal external opening through which digestive, urinary, and genital products leave the frog's body is the:",
+    "options": [
+      "Anus",
+      "Urethra",
+      "Cloacal aperture",
+      "Bidder's pore"
+    ],
+    "answer": 2,
+    "explanation": "The cloaca opens to the exterior via the cloacal aperture."
+  },
+  {
+    "id": 70,
+    "section": "Digestive System",
+    "question": "Salivary glands in the buccal cavity of frog are:",
+    "options": [
+      "Abundant and secrete salivary amylase",
+      "Completely absent",
+      "Three pairs producing ptyalin",
+      "Located beneath the tongue only"
+    ],
+    "answer": 1,
+    "explanation": "Frogs lack true salivary glands in their buccal cavity."
+  },
+  {
+    "id": 71,
+    "section": "Respiratory System",
+    "question": "Frogs respire on land and in the water by:",
+    "options": [
+      "The same set of internal gills",
+      "Two different methods: cutaneous respiration in water, and buccal/cutaneous/pulmonary on land",
+      "Exclusively lungs in both habitats",
+      "Tracheal tubes and spiracles"
+    ],
+    "answer": 1,
+    "explanation": "Frogs respire on land and in the water by two different methods: in water, skin acts as aquatic respiratory organ; on land, buccal cavity, skin and lungs act as respiratory organs."
+  },
+  {
+    "id": 72,
+    "section": "Respiratory System",
+    "question": "When in water, respiration in frog takes place primarily through the:",
+    "options": [
+      "External gills",
+      "Skin (cutaneous respiration)",
+      "Lungs",
+      "Tympanic membrane"
+    ],
+    "answer": 1,
+    "explanation": "In water, skin acts as aquatic respiratory organ (cutaneous respiration). Dissolved oxygen in water is exchanged through the skin by diffusion."
+  },
+  {
+    "id": 73,
+    "section": "Respiratory System",
+    "question": "During cutaneous respiration in water, dissolved oxygen is exchanged across the skin by:",
+    "options": [
+      "Active transport pumps",
+      "Simple physical diffusion",
+      "Endocytosis",
+      "Osmotic bulk flow"
+    ],
+    "answer": 1,
+    "explanation": "Dissolved oxygen in the water is exchanged through the skin by simple diffusion."
+  },
+  {
+    "id": 74,
+    "section": "Respiratory System",
+    "question": "On land, what three respiratory modes/organs are utilized by the frog?",
+    "options": [
+      "Gills, spiracles, and tracheae",
+      "Buccal cavity, skin, and lungs",
+      "Lungs, air sacs, and gills",
+      "Skin, diaphragm, and ribs"
+    ],
+    "answer": 1,
+    "explanation": "On land, the buccal cavity, skin, and lungs act as the respiratory organs."
+  },
+  {
+    "id": 75,
+    "section": "Respiratory System",
+    "question": "Respiration performed by the lungs in a frog is termed:",
+    "options": [
+      "Cutaneous respiration",
+      "Pulmonary respiration",
+      "Branchial respiration",
+      "Tracheal respiration"
+    ],
+    "answer": 1,
+    "explanation": "Respiration by lungs is called pulmonary respiration."
+  },
+  {
+    "id": 76,
+    "section": "Respiratory System",
+    "question": "The lungs of a frog are described as a pair of:",
+    "options": [
+      "Elongated, pink-coloured, sac-like structures situated in the upper part of the trunk region (thorax)",
+      "Compact, dark red, bean-shaped structures in the pelvis",
+      "Branching cartilaginous bronchial trees",
+      "Thin-walled air sacs filling the abdominal cavity"
+    ],
+    "answer": 0,
+    "explanation": "The lungs are a pair of elongated, pink coloured sac-like structures present in the upper part of the trunk region (thorax)."
+  },
+  {
+    "id": 77,
+    "section": "Respiratory System",
+    "question": "During pulmonary respiration on land, the correct pathway of atmospheric air into the lungs is:",
+    "options": [
+      "Mouth -> Pharynx -> Oesophagus -> Lungs",
+      "Nostrils -> Buccal cavity -> Lungs",
+      "Tympanum -> Eustachian tube -> Lungs",
+      "Skin pores -> Heart -> Lungs"
+    ],
+    "answer": 1,
+    "explanation": "Air enters through the nostrils into the buccal cavity and then is forced into the lungs."
+  },
+  {
+    "id": 78,
+    "section": "Respiratory System",
+    "question": "During periods of aestivation (summer sleep) and hibernation (winter sleep), gaseous exchange in frog takes place:",
+    "options": [
+      "Exclusively through the lungs",
+      "Exclusively through the skin",
+      "Through the buccal cavity only",
+      "Through non-functional gills"
+    ],
+    "answer": 1,
+    "explanation": "During aestivation and hibernation, gaseous exchange takes place exclusively through the skin."
+  },
+  {
+    "id": 79,
+    "section": "Respiratory System",
+    "question": "Why can frogs NOT perform pulmonary respiration during hibernation underground?",
+    "options": [
+      "Their lungs degenerate completely during winter",
+      "They remain submerged in deep burrows with nostrils closed and metabolic rate reduced",
+      "Their blood circulation stops entirely",
+      "Their red blood cells lose hemoglobin"
+    ],
+    "answer": 1,
+    "explanation": "In burrows, frogs enter torpor with minimal metabolic demands; cutaneous respiration alone suffices for oxygen requirements."
+  },
+  {
+    "id": 80,
+    "section": "Respiratory System",
+    "question": "What is unique about the breathing mechanism in frogs compared to mammals?",
+    "options": [
+      "Frogs have a muscular diaphragm that contracts to create negative pressure",
+      "Frogs lack ribs and diaphragm, using a positive pressure buccal force-pump mechanism",
+      "Frogs have pleural cavities with negative intrapleural pressure",
+      "Frogs breathe through a rigid trachea with cartilaginous rings"
+    ],
+    "answer": 1,
+    "explanation": "Frogs lack both a diaphragm and ribs; they inflate their lungs by positive pressure pumping of the buccal cavity floor."
+  },
+  {
+    "id": 81,
+    "section": "Respiratory System",
+    "question": "During buccal respiration, air is drawn into the buccal cavity by:",
+    "options": [
+      "Raising the floor of the buccal cavity",
+      "Lowering the floor of the buccal cavity while mouth is closed and nostrils open",
+      "Expanding the rib cage outwards",
+      "Opening the cloaca"
+    ],
+    "answer": 1,
+    "explanation": "Lowering the floor of the buccal cavity creates negative pressure, drawing air through the open external nostrils."
+  },
+  {
+    "id": 82,
+    "section": "Respiratory System",
+    "question": "During pulmonary respiration, how is air pushed from the buccal cavity into the lungs?",
+    "options": [
+      "By contracting the diaphragm downwards",
+      "By closing the nostrils and mouth and raising the floor of the buccal cavity",
+      "By opening the glottis while air is exhaled from the skin",
+      "By contracting abdominal muscles only"
+    ],
+    "answer": 1,
+    "explanation": "With mouth and external nares closed, raising the buccal floor pushes air through the open glottis into the lungs."
+  },
+  {
+    "id": 83,
+    "section": "Respiratory System",
+    "question": "The opening on the floor of the pharynx that leads into the laryngeotracheal chamber and lungs is the:",
+    "options": [
+      "Gullet",
+      "Glottis",
+      "Eustachian aperture",
+      "Internal nostril"
+    ],
+    "answer": 1,
+    "explanation": "The slit-like aperture on the floor of the pharynx leading into the respiratory tract is the glottis."
+  },
+  {
+    "id": 84,
+    "section": "Respiratory System",
+    "question": "Which physical condition of the skin is an absolute prerequisite for cutaneous respiration in frogs?",
+    "options": [
+      "Dry and exposed to bright sunlight",
+      "Moist, highly vascular, and richly supplied with capillary blood",
+      "Heavily cornified with keratin plaques",
+      "Immersed in boiling thermal water"
+    ],
+    "answer": 1,
+    "explanation": "The skin must be kept moist and possesses a rich network of subcutaneous blood capillaries for effective diffusion."
+  },
+  {
+    "id": 85,
+    "section": "Respiratory System",
+    "question": "If a frog's skin dries up completely due to prolonged dry air exposure, what will happen?",
+    "options": [
+      "It will switch entirely to tracheal breathing",
+      "Cutaneous gas exchange stops, leading to suffocation and death",
+      "It immediately sheds its skin and grows gills",
+      "It reproduces by parthenogenesis"
+    ],
+    "answer": 1,
+    "explanation": "A dry skin cannot dissolve oxygen; cutaneous respiration ceases, which can lead to asphyxiation and death."
+  },
+  {
+    "id": 86,
+    "section": "Digestive & Respiratory Systems",
+    "question": "The entrance to the oesophagus from the pharynx is called the:",
+    "options": [
+      "Glottis",
+      "Gullet",
+      "Pylorus",
+      "Cardia"
+    ],
+    "answer": 1,
+    "explanation": "The wide aperture leading from the pharynx into the oesophagus is the gullet."
+  },
+  {
+    "id": 87,
+    "section": "Digestive & Respiratory Systems",
+    "question": "Which of the following acts as a common passage for food and air in the frog?",
+    "options": [
+      "Buccopharyngeal cavity",
+      "Stomach",
+      "Duodenum",
+      "Trachea"
+    ],
+    "answer": 0,
+    "explanation": "The combined buccal cavity and pharynx (buccopharyngeal cavity) conducts both food to the gullet and air to the glottis."
+  },
+  {
+    "id": 88,
+    "section": "Digestive & Respiratory Systems",
+    "question": "The respiratory pigment responsible for oxygen transport in a frog's blood is:",
+    "options": [
+      "Haemocyanin dissolved in plasma",
+      "Haemoglobin present within nucleated red blood cells",
+      "Chlorocruorin in white blood cells",
+      "Haemoerythrin"
+    ],
+    "answer": 1,
+    "explanation": "Frogs have haemoglobin located inside their nucleated red blood cells."
+  },
+  {
+    "id": 89,
+    "section": "Digestive & Respiratory Systems",
+    "question": "What is the role of hydrochloric acid (HCl) secreted by the gastric glands of a frog?",
+    "options": [
+      "Provides an alkaline pH for trypsin",
+      "Provides an acidic medium and activates proteolytic pepsinogen",
+      "Emulsifies large fat droplets directly",
+      "Absorbs water in the rectum"
+    ],
+    "answer": 1,
+    "explanation": "HCl creates an acidic environment in the stomach and activates proteolytic enzymes (pepsinogen to pepsin)."
+  },
+  {
+    "id": 90,
+    "section": "Digestive & Respiratory Systems",
+    "question": "The digestive gland lying in the loop between the stomach and duodenum is the:",
+    "options": [
+      "Spleen",
+      "Pancreas",
+      "Thyroid",
+      "Adrenal gland"
+    ],
+    "answer": 1,
+    "explanation": "The pancreas is an irregularly branched digestive gland located in the mesentery between the stomach and the duodenum."
+  },
+  {
+    "id": 91,
+    "section": "Circulatory System",
+    "question": "The circulatory system of a frog is classified as:",
+    "options": [
+      "Open circulatory system with haemocoel",
+      "Well-developed closed circulatory system",
+      "Incomplete open vascular system",
+      "Water vascular system"
+    ],
+    "answer": 1,
+    "explanation": "The vascular system of frog is a well-developed closed circulatory system. Frog also possesses a lymphatic system."
+  },
+  {
+    "id": 92,
+    "section": "Circulatory System",
+    "question": "The blood vascular system of a frog involves:",
+    "options": [
+      "Heart, blood vessels, and blood",
+      "Heart, open sinuses, and haemolymph",
+      "Water canals and ostia",
+      "Spiracles, trachea, and pericardial sinus"
+    ],
+    "answer": 0,
+    "explanation": "The blood vascular system involves heart, blood vessels, and blood."
+  },
+  {
+    "id": 93,
+    "section": "Circulatory System",
+    "question": "The lymphatic system of a frog consists of:",
+    "options": [
+      "Only lymph fluid",
+      "Lymph, lymph channels, and lymph nodes",
+      "Hemolymph and ostia",
+      "Blood capillaries and pericardium only"
+    ],
+    "answer": 1,
+    "explanation": "The lymphatic system consists of lymph, lymph channels, and lymph nodes."
+  },
+  {
+    "id": 94,
+    "section": "Circulatory System",
+    "question": "The heart of a frog is located:",
+    "options": [
+      "In the pelvic region near kidneys",
+      "In the upper part of the body cavity",
+      "Directly behind the cloaca",
+      "In the subcutaneous lymph sac"
+    ],
+    "answer": 1,
+    "explanation": "Heart is a muscular organ situated in the upper part of the body cavity."
+  },
+  {
+    "id": 95,
+    "section": "Circulatory System",
+    "question": "How many chambers are present in the heart of an adult frog?",
+    "options": [
+      "Two chambers (one atrium and one ventricle)",
+      "Three chambers (two atria and one ventricle)",
+      "Four chambers (two atria and two ventricles)",
+      "Single tubular pulsating chamber"
+    ],
+    "answer": 1,
+    "explanation": "The heart of a frog has three chambers: two atria and one ventricle."
+  },
+  {
+    "id": 96,
+    "section": "Circulatory System",
+    "question": "The heart of a frog is enclosed and protected by a double-walled membrane called the:",
+    "options": [
+      "Pleura",
+      "Pericardium",
+      "Peritoneum",
+      "Mesorchium"
+    ],
+    "answer": 1,
+    "explanation": "The heart is covered by a double-walled membrane called pericardium."
+  },
+  {
+    "id": 97,
+    "section": "Circulatory System",
+    "question": "A triangular accessory chamber present on the dorsal side of the frog's heart is the:",
+    "options": [
+      "Conus arteriosus",
+      "Sinus venosus",
+      "Truncus arteriosus",
+      "Bidder's organ"
+    ],
+    "answer": 1,
+    "explanation": "A triangular structure called sinus venosus joins the right atrium on the dorsal side of the heart."
+  },
+  {
+    "id": 98,
+    "section": "Circulatory System",
+    "question": "The sinus venosus receives deoxygenated blood from the body via major veins called:",
+    "options": [
+      "Pulmonary veins",
+      "Vena cava (precavals and postcaval)",
+      "Renal portal veins only",
+      "Hepatic artery"
+    ],
+    "answer": 1,
+    "explanation": "Sinus venosus receives blood through the major veins called vena cava."
+  },
+  {
+    "id": 99,
+    "section": "Circulatory System",
+    "question": "The sinus venosus directly opens into which chamber of the frog's heart?",
+    "options": [
+      "Left atrium",
+      "Right atrium",
+      "Ventricle",
+      "Conus arteriosus"
+    ],
+    "answer": 1,
+    "explanation": "The sinus venosus joins and opens into the right atrium."
+  },
+  {
+    "id": 100,
+    "section": "Circulatory System",
+    "question": "On the ventral side of the frog's heart, the single ventricle opens into a thick muscular chamber called:",
+    "options": [
+      "Sinus venosus",
+      "Conus arteriosus",
+      "Left atrium",
+      "Dorsal aorta"
+    ],
+    "answer": 1,
+    "explanation": "The ventricle opens into a sac-like conus arteriosus on the ventral side of the heart."
+  },
+  {
+    "id": 101,
+    "section": "Circulatory System",
+    "question": "The conus arteriosus divides into two arches called truncus arteriosus, which further branch into:",
+    "options": [
+      "Carotid, systemic, and pulmocutaneous arches",
+      "Precavals and postcavals",
+      "Renal and mesenteric arches only",
+      "Hepatic and splenic veins"
+    ],
+    "answer": 0,
+    "explanation": "Truncus arteriosus branches into carotid, systemic, and pulmocutaneous arches to supply different parts of the body."
+  },
+  {
+    "id": 102,
+    "section": "Circulatory System",
+    "question": "Blood from the heart is carried to all parts of the body by the:",
+    "options": [
+      "Venous system",
+      "Arterial system (arteries)",
+      "Lymphatic channels only",
+      "Portal system"
+    ],
+    "answer": 1,
+    "explanation": "The blood from the heart is carried to all parts of the body by the arteries (arterial system)."
+  },
+  {
+    "id": 103,
+    "section": "Circulatory System",
+    "question": "Veins collect blood from different parts of the body and return it to the heart, forming the:",
+    "options": [
+      "Arterial system",
+      "Venous system",
+      "Lymphatic system",
+      "Capillary bed"
+    ],
+    "answer": 1,
+    "explanation": "The veins collect blood from different parts of the body to the heart and form the venous system."
+  },
+  {
+    "id": 104,
+    "section": "Circulatory System",
+    "question": "A special venous connection present between the liver and intestine in frog is called the:",
+    "options": [
+      "Renal portal system",
+      "Hepatic portal system",
+      "Hypophyseal portal system",
+      "Pulmocutaneous loop"
+    ],
+    "answer": 1,
+    "explanation": "Special venous connection between liver and intestine is called hepatic portal system."
+  },
+  {
+    "id": 105,
+    "section": "Circulatory System",
+    "question": "The special venous connection present between the kidneys and the lower parts of the body in frog is called the:",
+    "options": [
+      "Hepatic portal system",
+      "Renal portal system",
+      "Carotid labyrinth",
+      "Vena caval system"
+    ],
+    "answer": 1,
+    "explanation": "Special venous connection between kidney and the lower parts of the body is called renal portal system."
+  },
+  {
+    "id": 106,
+    "section": "Circulatory System",
+    "question": "Which of the following portal systems is well-developed in frogs but ABSENT in adult mammals?",
+    "options": [
+      "Hepatic portal system",
+      "Renal portal system",
+      "Hypothalamo-hypophyseal portal system",
+      "Coronary circulation"
+    ],
+    "answer": 1,
+    "explanation": "The renal portal system is characteristic of amphibians like frogs, but is absent in mammals."
+  },
+  {
+    "id": 107,
+    "section": "Circulatory System",
+    "question": "What kind of circulation is present in an adult frog with a three-chambered heart?",
+    "options": [
+      "Single circulation like fish",
+      "Incomplete double circulation with mixed blood in the single ventricle",
+      "Complete double circulation with separate ventricles",
+      "Open sinus circulation without blood vessels"
+    ],
+    "answer": 1,
+    "explanation": "Because there are two atria but only one ventricle, oxygenated and deoxygenated blood mix in the ventricle, resulting in incomplete double circulation."
+  },
+  {
+    "id": 108,
+    "section": "Circulatory System",
+    "question": "Blood in a frog consists of:",
+    "options": [
+      "Fluid plasma and formed elements (cells)",
+      "Only colorless lymph fluid",
+      "Hemolymph without cells",
+      "Plasma containing dissolved hemoglobin and no RBCs"
+    ],
+    "answer": 0,
+    "explanation": "The blood consists of plasma and cells."
+  },
+  {
+    "id": 109,
+    "section": "Circulatory System",
+    "question": "The blood cells (formed elements) found in frog blood are:",
+    "options": [
+      "RBCs and WBCs only",
+      "RBCs (erythrocytes), WBCs (leucocytes), and platelets",
+      "Only nucleated erythrocytes",
+      "Only leucocytes and thrombocytes"
+    ],
+    "answer": 1,
+    "explanation": "The blood cells are RBCs (erythrocytes), WBCs (leucocytes) and platelets."
+  },
+  {
+    "id": 110,
+    "section": "Circulatory System",
+    "question": "Red blood corpuscles (RBCs) of a frog are morphologically characterized as:",
+    "options": [
+      "Circular, biconcave, and enucleated",
+      "Oval, biconvex, nucleated, and contain hemoglobin",
+      "Spindle-shaped and devoid of respiratory pigment",
+      "Amoeboid, non-nucleated fragments"
+    ],
+    "answer": 1,
+    "explanation": "RBCs in frog are nucleated, oval, biconvex, and contain the respiratory pigment haemoglobin."
+  },
+  {
+    "id": 111,
+    "section": "Circulatory System",
+    "question": "How do frog erythrocytes (RBCs) differ fundamentally from mature human erythrocytes?",
+    "options": [
+      "Frog RBCs lack hemoglobin",
+      "Frog RBCs are nucleated, whereas mature human RBCs are enucleated",
+      "Frog RBCs are smaller than human RBCs",
+      "Frog RBCs do not transport oxygen"
+    ],
+    "answer": 1,
+    "explanation": "Frog RBCs are nucleated, whereas mature mammalian/human RBCs lack a nucleus."
+  },
+  {
+    "id": 112,
+    "section": "Circulatory System",
+    "question": "Lymph in frog differs from blood because lymph:",
+    "options": [
+      "Contains excess RBCs and no plasma",
+      "Lacks few proteins and RBCs",
+      "Contains only platelets and fibrinogen",
+      "Is bright red in colour"
+    ],
+    "answer": 1,
+    "explanation": "The lymph is different from blood; it lacks few proteins and RBCs."
+  },
+  {
+    "id": 113,
+    "section": "Circulatory System",
+    "question": "The primary pumping action of the heart is maintained by rhythmic contraction of which muscular tissue?",
+    "options": [
+      "Smooth visceral muscle",
+      "Cardiac muscle",
+      "Skeletal muscle fibers",
+      "Elastic connective tissue"
+    ],
+    "answer": 1,
+    "explanation": "The heart wall is made of cardiac muscle that contracts and relaxes rhythmically to pump blood."
+  },
+  {
+    "id": 114,
+    "section": "Circulatory System",
+    "question": "Which chamber of the frog's heart receives oxygenated blood from the lungs via pulmonary veins?",
+    "options": [
+      "Right atrium",
+      "Left atrium",
+      "Sinus venosus",
+      "Conus arteriosus"
+    ],
+    "answer": 1,
+    "explanation": "The left atrium receives oxygenated blood from the lungs through pulmonary veins."
+  },
+  {
+    "id": 115,
+    "section": "Circulatory System",
+    "question": "Which chamber of the frog's heart receives deoxygenated blood from the sinus venosus?",
+    "options": [
+      "Right atrium",
+      "Left atrium",
+      "Ventricle directly",
+      "Aorta"
+    ],
+    "answer": 0,
+    "explanation": "Deoxygenated blood from the sinus venosus empties into the right atrium."
+  },
+  {
+    "id": 116,
+    "section": "Excretory System",
+    "question": "The elimination of nitrogenous wastes in frog is carried out by a well-developed excretory system consisting of:",
+    "options": [
+      "A pair of kidneys, ureters, cloaca, and urinary bladder",
+      "Flame cells and nephridia",
+      "Malpighian tubules and rectum",
+      "Kidneys and urethra only without cloaca"
+    ],
+    "answer": 0,
+    "explanation": "The elimination of nitrogenous wastes is carried out by a well developed excretory system consisting of a pair of kidneys, ureters, cloaca, and urinary bladder."
+  },
+  {
+    "id": 117,
+    "section": "Excretory System",
+    "question": "The kidneys of a frog are described morphologically as:",
+    "options": [
+      "Elongated, pink, sac-like structures",
+      "Compact, dark red, and bean-like structures",
+      "Thin-walled bilobed vesicles",
+      "Diffuse yellow glandular masses"
+    ],
+    "answer": 1,
+    "explanation": "Kidneys are compact, dark red and bean-like structures."
+  },
+  {
+    "id": 118,
+    "section": "Excretory System",
+    "question": "Where are the kidneys situated in the body cavity of a frog?",
+    "options": [
+      "Anteriorly near the heart",
+      "Little posteriorly in the body cavity on both sides of the vertebral column",
+      "Ventral to the stomach",
+      "Inside the urinary bladder"
+    ],
+    "answer": 1,
+    "explanation": "The kidneys are situated little posteriorly in the body cavity on both sides of the vertebral column."
+  },
+  {
+    "id": 119,
+    "section": "Excretory System",
+    "question": "Each kidney in a frog is composed of numerous structural and functional units called:",
+    "options": [
+      "Seminiferous tubules",
+      "Uriniferous tubules or nephrons",
+      "Alveoli",
+      "Hepatic lobules"
+    ],
+    "answer": 1,
+    "explanation": "Each kidney is composed of several structural and functional units called uriniferous tubules or nephrons."
+  },
+  {
+    "id": 120,
+    "section": "Excretory System",
+    "question": "In male frogs, the two ureters emerging from the kidneys function as:",
+    "options": [
+      "Only urinary ducts",
+      "Urogenital ducts (conducting both urine and sperms)",
+      "Spermatic cords only",
+      "Alimentary ducts"
+    ],
+    "answer": 1,
+    "explanation": "In male frogs, the ureters act as urogenital duct which opens into the cloaca, carrying both urine and sperms."
+  },
+  {
+    "id": 121,
+    "section": "Excretory System",
+    "question": "In female frogs, how do the ureters and oviducts open into the cloaca?",
+    "options": [
+      "They join to form a single urogenital duct",
+      "Ureters and oviducts open separately into the cloaca",
+      "They open into the urinary bladder first",
+      "Oviducts open into the kidneys"
+    ],
+    "answer": 1,
+    "explanation": "In females, the ureters and oviduct open separately into the cloaca; the ureter conducts only urine."
+  },
+  {
+    "id": 122,
+    "section": "Excretory System",
+    "question": "The urinary bladder of a frog is located:",
+    "options": [
+      "Dorsal to the kidneys",
+      "Ventral to the rectum and opens into the cloaca",
+      "Inside the stomach lumen",
+      "Anterior to the heart"
+    ],
+    "answer": 1,
+    "explanation": "The thin-walled urinary bladder is present ventral to the rectum which also opens in the cloaca."
+  },
+  {
+    "id": 123,
+    "section": "Excretory System",
+    "question": "How is urine transferred into the urinary bladder in a frog?",
+    "options": [
+      "Ureters open directly into the urinary bladder",
+      "Urine from ureters empties into the cloaca first and then enters the bladder",
+      "Through blood capillaries directly",
+      "Through the mesenteric duct"
+    ],
+    "answer": 1,
+    "explanation": "In frogs, ureters open into the dorsal wall of the cloaca; urine enters the ventral urinary bladder from the cloaca for temporary storage."
+  },
+  {
+    "id": 124,
+    "section": "Excretory System",
+    "question": "The frog is an ammonotelic, ureotelic, or uricotelic animal?",
+    "options": [
+      "Ammonotelic",
+      "Ureotelic",
+      "Uricotelic",
+      "Guanotelic"
+    ],
+    "answer": 1,
+    "explanation": "The frog excretes urea and thus is a ureotelic animal."
+  },
+  {
+    "id": 125,
+    "section": "Excretory System",
+    "question": "What is the primary nitrogenous excretory product in an adult frog?",
+    "options": [
+      "Ammonia",
+      "Urea",
+      "Uric acid crystals",
+      "Guanine"
+    ],
+    "answer": 1,
+    "explanation": "The primary nitrogenous waste excreted by an adult frog is urea."
+  },
+  {
+    "id": 126,
+    "section": "Excretory System",
+    "question": "Nitrogenous wastes in a frog are transported by the ______ into the kidneys where they are separated and excreted.",
+    "options": [
+      "Lymph",
+      "Blood",
+      "Bile",
+      "Coelomic fluid only"
+    ],
+    "answer": 1,
+    "explanation": "Nitrogenous wastes are carried by blood into the kidneys where they are separated and excreted."
+  },
+  {
+    "id": 127,
+    "section": "Excretory System",
+    "question": "While an adult frog is ureotelic, its aquatic tadpole larva is:",
+    "options": [
+      "Ureotelic",
+      "Ammonotelic",
+      "Uricotelic",
+      "Aposmotic"
+    ],
+    "answer": 1,
+    "explanation": "The aquatic tadpole larva excretes toxic ammonia directly into water, making it ammonotelic."
+  },
+  {
+    "id": 128,
+    "section": "Excretory System",
+    "question": "The transition from ammonotelism in tadpole to ureotelism in adult frog is an adaptation for:",
+    "options": [
+      "Underwater breathing",
+      "Terrestrial mode of life and water conservation",
+      "Carnivorous diet only",
+      "Rapid metamorphosis"
+    ],
+    "answer": 1,
+    "explanation": "Urea is less toxic than ammonia and requires far less water for excretion, facilitating terrestrial existence."
+  },
+  {
+    "id": 129,
+    "section": "Excretory System",
+    "question": "Which of the following statements about the frog's excretory system is FALSE?",
+    "options": [
+      "Kidneys are mesonephric in adult frog",
+      "Male frog has a common urogenital duct",
+      "Female frog has a urogenital duct that carries both ova and urine",
+      "Urinary bladder opens into the cloaca"
+    ],
+    "answer": 2,
+    "explanation": "Statement C is FALSE: in female frogs, ureters and oviducts open separately into the cloaca; there is no urogenital duct in females."
+  },
+  {
+    "id": 130,
+    "section": "Excretory System",
+    "question": "The yellowish, narrow, finger-like fatty bodies attached to the anterior end of the kidneys in frogs are called:",
+    "options": [
+      "Adrenal glands",
+      "Fat bodies (corpora adiposa)",
+      "Bidder's canal",
+      "Spleen"
+    ],
+    "answer": 1,
+    "explanation": "Fat bodies (corpora adiposa) are present at the anterior ends of the kidneys and store reserve nutrients for hibernation and reproduction."
+  },
+  {
+    "id": 131,
+    "section": "Excretory System",
+    "question": "Adrenal glands in a frog are situated as:",
+    "options": [
+      "Separate round glands inside the brain",
+      "Yellowish bands on the ventral surface of each kidney",
+      "Glands embedded inside the pancreas",
+      "Small lobes inside the urinary bladder"
+    ],
+    "answer": 1,
+    "explanation": "The adrenal (suprarenal) glands are visible as dark yellowish-orange bands on the ventral surface of the kidneys."
+  },
+  {
+    "id": 132,
+    "section": "Circulatory & Excretory Systems",
+    "question": "The renal portal vein collects blood from the:",
+    "options": [
+      "Brain and eyes",
+      "Hindlimbs and posterior body parts and delivers it to the kidneys",
+      "Intestine and stomach and delivers it to the liver",
+      "Lungs and skin and delivers it to the left atrium"
+    ],
+    "answer": 1,
+    "explanation": "The renal portal vein collects venous blood from the hindlimbs and pelvic region and directs it into the kidneys."
+  },
+  {
+    "id": 133,
+    "section": "Circulatory & Excretory Systems",
+    "question": "Deoxygenated blood from the kidneys in frog is collected by renal veins and poured into the:",
+    "options": [
+      "Precaval vein",
+      "Postcaval vein (posterior vena cava)",
+      "Hepatic portal vein",
+      "Pulmocutaneous artery"
+    ],
+    "answer": 1,
+    "explanation": "Renal veins carry filtered venous blood from the kidneys into the large postcaval vein that leads to the sinus venosus."
+  },
+  {
+    "id": 134,
+    "section": "Circulatory & Excretory Systems",
+    "question": "Which organ serves as both a blood filter and a reservoir for red blood cells in a frog?",
+    "options": [
+      "Gall bladder",
+      "Spleen",
+      "Thyroid",
+      "Thymus"
+    ],
+    "answer": 1,
+    "explanation": "The spleen is a small, dark-red round organ located in the mesentery that functions in blood storage and filtration."
+  },
+  {
+    "id": 135,
+    "section": "Circulatory & Excretory Systems",
+    "question": "The opening of the right atrium into the ventricle and the left atrium into the ventricle is guarded by:",
+    "options": [
+      "Semilunar valves",
+      "Atrioventricular valves",
+      "Spiral valve of conus",
+      "Pyloric valve"
+    ],
+    "answer": 1,
+    "explanation": "The atrioventricular aperture between the atria and the single ventricle is guarded by atrioventricular valves."
+  },
+  {
+    "id": 136,
+    "section": "Control & Coordination",
+    "question": "Control and coordination in frogs is achieved through the integrated action of:",
+    "options": [
+      "Only the nervous system",
+      "Only endocrine hormones",
+      "Both the neural system and endocrine glands",
+      "Direct epidermal electrical conduction"
+    ],
+    "answer": 2,
+    "explanation": "The system for control and coordination is highly evolved in the frog. It includes both neural system and endocrine glands."
+  },
+  {
+    "id": 137,
+    "section": "Control & Coordination",
+    "question": "Which of the following endocrine glands is NOT found in a frog?",
+    "options": [
+      "Pituitary, thyroid, and parathyroid",
+      "Thymus, pineal body, and adrenals",
+      "Pancreatic islets and gonads",
+      "Corpora allata and prothoracic glands"
+    ],
+    "answer": 3,
+    "explanation": "Prominent endocrine glands in frog are pituitary, thyroid, parathyroid, thymus, pineal body, pancreatic islets, adrenals, and gonads. Corpora allata are insect glands."
+  },
+  {
+    "id": 138,
+    "section": "Control & Coordination",
+    "question": "The nervous system of a frog is organized into:",
+    "options": [
+      "Central nervous system (CNS) only",
+      "Peripheral nervous system (PNS) only",
+      "Central, peripheral, and autonomic nervous systems",
+      "Nerve net and diffuse ganglia only"
+    ],
+    "answer": 2,
+    "explanation": "The nervous system is organized into a central nervous system (CNS), a peripheral nervous system (PNS), and an autonomic nervous system (ANS)."
+  },
+  {
+    "id": 139,
+    "section": "Control & Coordination",
+    "question": "The Central Nervous System (CNS) of a frog comprises the:",
+    "options": [
+      "Cranial nerves and spinal nerves",
+      "Brain and spinal cord",
+      "Sympathetic and parasympathetic chains",
+      "Optic lobes and olfactory bulbs only"
+    ],
+    "answer": 1,
+    "explanation": "The CNS consists of the brain and the spinal cord."
+  },
+  {
+    "id": 140,
+    "section": "Control & Coordination",
+    "question": "The Peripheral Nervous System (PNS) of a frog is composed of:",
+    "options": [
+      "Brain and spinal cord",
+      "Cranial nerves and spinal nerves",
+      "Sympathetic ganglia only",
+      "Cerebrum and cerebellum"
+    ],
+    "answer": 1,
+    "explanation": "The PNS consists of cranial nerves and spinal nerves."
+  },
+  {
+    "id": 141,
+    "section": "Control & Coordination",
+    "question": "How many pairs of cranial nerves arise from the brain of a frog?",
+    "options": [
+      "8 pairs",
+      "10 pairs",
+      "12 pairs",
+      "31 pairs"
+    ],
+    "answer": 1,
+    "explanation": "Ten pairs of cranial nerves arise from the brain in frogs (amphibians)."
+  },
+  {
+    "id": 142,
+    "section": "Control & Coordination",
+    "question": "The brain of a frog is enclosed and protected inside a bony box called the:",
+    "options": [
+      "Vertebral column",
+      "Cranium (brain box)",
+      "Acetabulum",
+      "Pericardium"
+    ],
+    "answer": 1,
+    "explanation": "Brain is enclosed in a bony structure called brain box or cranium."
+  },
+  {
+    "id": 143,
+    "section": "Control & Coordination",
+    "question": "The brain of a frog is divided into which three fundamental regions?",
+    "options": [
+      "Proventriculus, gizzard, and intestine",
+      "Forebrain, midbrain, and hindbrain",
+      "Optic chiasma, medulla, and pons",
+      "Telencephalon and spinal cord only"
+    ],
+    "answer": 1,
+    "explanation": "The brain is divided into forebrain, midbrain, and hindbrain."
+  },
+  {
+    "id": 144,
+    "section": "Control & Coordination",
+    "question": "The forebrain of a frog includes which of the following structures?",
+    "options": [
+      "Pair of optic lobes and cerebellum",
+      "Olfactory lobes, paired cerebral hemispheres, and unpaired diencephalon",
+      "Cerebellum and medulla oblongata",
+      "Medulla oblongata and spinal cord"
+    ],
+    "answer": 1,
+    "explanation": "Forebrain includes olfactory lobes, paired cerebral hemispheres, and unpaired diencephalon."
+  },
+  {
+    "id": 145,
+    "section": "Control & Coordination",
+    "question": "The midbrain of a frog is characteristically recognized by the presence of a pair of:",
+    "options": [
+      "Olfactory lobes",
+      "Cerebral hemispheres",
+      "Optic lobes",
+      "Auditory vesicles"
+    ],
+    "answer": 2,
+    "explanation": "The midbrain is characterized by a pair of prominent optic lobes."
+  },
+  {
+    "id": 146,
+    "section": "Control & Coordination",
+    "question": "The hindbrain of a frog consists of:",
+    "options": [
+      "Cerebellum and medulla oblongata",
+      "Diencephalon and optic lobes",
+      "Olfactory lobes and cerebrum",
+      "Pons Varolii and pituitary"
+    ],
+    "answer": 0,
+    "explanation": "Hindbrain consists of cerebellum and medulla oblongata."
+  },
+  {
+    "id": 147,
+    "section": "Control & Coordination",
+    "question": "The medulla oblongata passes out of the cranium through the ______ and continues into the spinal cord.",
+    "options": [
+      "Foramen of Monro",
+      "Foramen magnum",
+      "Foramen ovale",
+      "Obturator foramen"
+    ],
+    "answer": 1,
+    "explanation": "The medulla oblongata passes out through the foramen magnum and continues into spinal cord."
+  },
+  {
+    "id": 148,
+    "section": "Control & Coordination",
+    "question": "The spinal cord of a frog is safely enclosed and protected within the:",
+    "options": [
+      "Cranium",
+      "Vertebral column",
+      "Coelomic cavity",
+      "Pectoral girdle"
+    ],
+    "answer": 1,
+    "explanation": "The spinal cord is enclosed in the neural canal of the vertebral column."
+  },
+  {
+    "id": 149,
+    "section": "Control & Coordination",
+    "question": "The Autonomic Nervous System (ANS) in frog is composed of:",
+    "options": [
+      "Cerebrum and cerebellum",
+      "Sympathetic and parasympathetic neural systems",
+      "Brain and cranial nerves",
+      "Spinal cord and sciatic nerves"
+    ],
+    "answer": 1,
+    "explanation": "The autonomic nervous system is divided into sympathetic and parasympathetic systems."
+  },
+  {
+    "id": 150,
+    "section": "Sense Organs",
+    "question": "Which of the following sensory organs in a frog are well-organized anatomical structures rather than simple cellular aggregations?",
+    "options": [
+      "Sensory papillae and taste buds",
+      "Nasal epithelium and sensory papillae",
+      "Eyes and internal ears",
+      "Taste buds and olfactory epithelium"
+    ],
+    "answer": 2,
+    "explanation": "Among the sense organs, eyes and internal ears are well-organized structures; the rest (touch, taste, smell) are cellular aggregations around nerve endings."
+  },
+  {
+    "id": 151,
+    "section": "Sense Organs",
+    "question": "In a frog, the organs of touch are:",
+    "options": [
+      "Taste buds",
+      "Sensory papillae",
+      "Nasal epithelium",
+      "Tympanic membranes"
+    ],
+    "answer": 1,
+    "explanation": "Organs of touch are sensory papillae located in the skin."
+  },
+  {
+    "id": 152,
+    "section": "Sense Organs",
+    "question": "The organs of taste in a frog are:",
+    "options": [
+      "Sensory papillae",
+      "Taste buds",
+      "Olfactory bulbs",
+      "Optic lobes"
+    ],
+    "answer": 1,
+    "explanation": "Organs of taste are taste buds located on the tongue and buccal floor."
+  },
+  {
+    "id": 153,
+    "section": "Sense Organs",
+    "question": "The organs of smell in a frog are represented by:",
+    "options": [
+      "Nasal epithelium",
+      "Sensory papillae",
+      "Taste buds",
+      "Vomerine teeth"
+    ],
+    "answer": 0,
+    "explanation": "Organs of smell are represented by the nasal epithelium lining the olfactory chambers."
+  },
+  {
+    "id": 154,
+    "section": "Sense Organs",
+    "question": "The eyes of a frog are considered 'simple eyes' because:",
+    "options": [
+      "They lack a retina and optic nerve",
+      "They possess only a single optical unit (unlike compound eyes)",
+      "They cannot distinguish any colors",
+      "They can only function underwater"
+    ],
+    "answer": 1,
+    "explanation": "Eyes in frog are simple eyes (possessing only one unit), unlike the compound eyes of arthropods."
+  },
+  {
+    "id": 155,
+    "section": "Sense Organs",
+    "question": "The ear in a frog performs dual sensory functions, which are:",
+    "options": [
+      "Hearing and olfaction",
+      "Hearing and balancing (equilibrium)",
+      "Vision and hearing",
+      "Thermoregulation and taste"
+    ],
+    "answer": 1,
+    "explanation": "Ear is an organ of hearing as well as balancing (equilibrium)."
+  },
+  {
+    "id": 156,
+    "section": "Male Reproductive System",
+    "question": "The male reproductive system of a frog consists of a pair of:",
+    "options": [
+      "Green cylindrical ovaries",
+      "Yellowish ovoid testes",
+      "Red bean-shaped kidneys",
+      "White spermatophores"
+    ],
+    "answer": 1,
+    "explanation": "Male reproductive organs consist of a pair of yellowish ovoid testes."
+  },
+  {
+    "id": 157,
+    "section": "Male Reproductive System",
+    "question": "The testes in a male frog are adhered to the upper part of the kidneys by a double fold of peritoneum called:",
+    "options": [
+      "Mesovarium",
+      "Mesorchium",
+      "Pericardium",
+      "Mesentery"
+    ],
+    "answer": 1,
+    "explanation": "Testes are found adhered to the upper part of kidneys by a double fold of peritoneum called mesorchium."
+  },
+  {
+    "id": 158,
+    "section": "Male Reproductive System",
+    "question": "How many vasa efferentia typically arise from the testes in a male frog?",
+    "options": [
+      "2-4",
+      "10-12",
+      "20-25",
+      "50-60"
+    ],
+    "answer": 1,
+    "explanation": "Vasa efferentia are 10-12 in number that arise from the testes."
+  },
+  {
+    "id": 159,
+    "section": "Male Reproductive System",
+    "question": "After emerging from the testes, the vasa efferentia enter the kidneys on their side and open into:",
+    "options": [
+      "Oviduct",
+      "Bidder's canal",
+      "Urinary bladder",
+      "Conus arteriosus"
+    ],
+    "answer": 1,
+    "explanation": "Vasa efferentia enter the kidneys on their side and open into Bidder's canal."
+  },
+  {
+    "id": 160,
+    "section": "Male Reproductive System",
+    "question": "Bidder's canal communicates with the ______ which carries sperms and urine into the cloaca.",
+    "options": [
+      "Oviduct",
+      "Urogenital duct",
+      "Hepatic duct",
+      "Pancreatic duct"
+    ],
+    "answer": 1,
+    "explanation": "Bidder's canal communicates with the longitudinal collecting canal and urogenital duct that opens into the cloaca."
+  },
+  {
+    "id": 161,
+    "section": "Male Reproductive System",
+    "question": "Bidder's canal is an anatomical structure found inside the:",
+    "options": [
+      "Testis of male frog",
+      "Kidney of male frog",
+      "Ovary of female frog",
+      "Urinary bladder of both sexes"
+    ],
+    "answer": 1,
+    "explanation": "Bidder's canal is located longitudinally along the inner medial border of the kidney in male frogs."
+  },
+  {
+    "id": 162,
+    "section": "Male Reproductive System",
+    "question": "In a male frog, the cloaca serves as a common passageway for which three substances?",
+    "options": [
+      "Faecal matter, urine, and sperms",
+      "Bile, pancreatic juice, and blood",
+      "Saliva, mucus, and eggs",
+      "Lymph, urine, and faeces only"
+    ],
+    "answer": 0,
+    "explanation": "The cloaca is a small, median chamber used to pass faecal matter, urine, and sperms to the exterior."
+  },
+  {
+    "id": 163,
+    "section": "Female Reproductive System",
+    "question": "The female reproductive organs of a frog include a pair of ovaries situated:",
+    "options": [
+      "Inside the liver",
+      "Near the kidneys, having no functional connection with them",
+      "Directly inside Bidder's canal",
+      "Fused permanently to the adrenal glands"
+    ],
+    "answer": 1,
+    "explanation": "The female reproductive organs include a pair of ovaries situated near kidneys and there is no functional connection with kidneys."
+  },
+  {
+    "id": 164,
+    "section": "Female Reproductive System",
+    "question": "In female frogs, the oviducts arising from the ovaries open into the:",
+    "options": [
+      "Kidneys directly",
+      "Ureters to form a urogenital duct",
+      "Cloaca separately",
+      "Urinary bladder"
+    ],
+    "answer": 2,
+    "explanation": "A pair of oviducts arising from the ovaries opens into the cloaca separately."
+  },
+  {
+    "id": 165,
+    "section": "Female Reproductive System",
+    "question": "A mature female frog can lay approximately how many ova (eggs) at a single spawning?",
+    "options": [
+      "100 to 200",
+      "500 to 1000",
+      "2500 to 3000",
+      "10,000 to 20,000"
+    ],
+    "answer": 2,
+    "explanation": "A mature female can lay 2500 to 3000 ova at a time."
+  },
+  {
+    "id": 166,
+    "section": "Development & Metamorphosis",
+    "question": "In frogs, fertilisation is ______ and takes place in ______.",
+    "options": [
+      "Internal; female oviduct",
+      "External; water",
+      "Internal; cloacal cavity",
+      "External; dry soil burrows"
+    ],
+    "answer": 1,
+    "explanation": "Fertilisation is external and takes place in water."
+  },
+  {
+    "id": 167,
+    "section": "Development & Metamorphosis",
+    "question": "Development in frogs is described as:",
+    "options": [
+      "Direct without any larval stage",
+      "Indirect, involving a free-swimming larval stage called tadpole",
+      "Viviparous with placental nourishment",
+      "Parthenogenetic without fertilisation"
+    ],
+    "answer": 1,
+    "explanation": "Development is indirect and involves a larval stage called tadpole."
+  },
+  {
+    "id": 168,
+    "section": "Development & Metamorphosis",
+    "question": "The aquatic larval stage of a frog that undergoes metamorphosis is the:",
+    "options": [
+      "Nymph",
+      "Tadpole",
+      "Trochophore",
+      "Planula"
+    ],
+    "answer": 1,
+    "explanation": "The free-swimming aquatic larva of a frog is called a tadpole."
+  },
+  {
+    "id": 169,
+    "section": "Development & Metamorphosis",
+    "question": "Tadpole larva transforms into an adult frog through the process of:",
+    "options": [
+      "Metagenesis",
+      "Metamorphosis",
+      "Ecdysis",
+      "Pedogenesis"
+    ],
+    "answer": 1,
+    "explanation": "Tadpole undergoes metamorphosis to form the adult frog."
+  },
+  {
+    "id": 170,
+    "section": "Development & Metamorphosis",
+    "question": "Which morphological structures present in a tadpole larva are lost during metamorphosis into an adult frog?",
+    "options": [
+      "Limbs and lungs",
+      "Tail and gills",
+      "Heart and brain",
+      "Stomach and kidneys"
+    ],
+    "answer": 1,
+    "explanation": "During metamorphosis, the aquatic respiratory gills and the swimming tail are resorbed as lungs and limbs develop."
+  },
+  {
+    "id": 171,
+    "section": "Development & Metamorphosis",
+    "question": "The diet of a tadpole larva differs from that of an adult frog in being predominantly:",
+    "options": [
+      "Carnivorous (eating fish fry)",
+      "Herbivorous (grazing on algae and aquatic plants)",
+      "Parasitic inside fish gut",
+      "Hematophagous"
+    ],
+    "answer": 1,
+    "explanation": "Tadpoles are herbivorous filter-feeders that possess a long coiled intestine; adult frogs are carnivorous with a short intestine."
+  },
+  {
+    "id": 172,
+    "section": "Development & Metamorphosis",
+    "question": "Which essential hormone secreted by an endocrine gland controls the metamorphosis of a tadpole into an adult frog?",
+    "options": [
+      "Insulin",
+      "Thyroxine (from thyroid gland)",
+      "Adrenaline",
+      "Growth hormone"
+    ],
+    "answer": 1,
+    "explanation": "Thyroxine secreted by the thyroid gland (requiring iodine) is essential for initiating and completing metamorphosis."
+  },
+  {
+    "id": 173,
+    "section": "Ecological & Economic Importance",
+    "question": "Frogs are beneficial to agriculture and human welfare because they:",
+    "options": [
+      "Aerate agricultural soil by deep tunneling like earthworms",
+      "Feed on insect pests and help protect standing crops",
+      "Produce commercial silk threads",
+      "Pollinate cereal crops like wheat"
+    ],
+    "answer": 1,
+    "explanation": "Frogs are beneficial for mankind because they eat insects and protect the crops."
+  },
+  {
+    "id": 174,
+    "section": "Ecological & Economic Importance",
+    "question": "In ecosystem food chains, frogs play an indispensable role by acting as:",
+    "options": [
+      "Primary autotrophic producers",
+      "An important predatory link connecting insects to higher trophic levels like snakes and birds",
+      "Decomposers of woody lignin",
+      "Exclusive marine scavengers"
+    ],
+    "answer": 1,
+    "explanation": "Frogs maintain ecological balance because these serve as an important link of food chain and food web in the ecosystem."
+  },
+  {
+    "id": 175,
+    "section": "Ecological & Economic Importance",
+    "question": "In several countries around the world, which part of the frog is commercially harvested and consumed as delicacy food by humans?",
+    "options": [
+      "Skin and eyes",
+      "Muscular legs",
+      "Liver and gall bladder",
+      "Vomerine teeth"
+    ],
+    "answer": 1,
+    "explanation": "In some countries the muscular legs of frog are used as food by man."
+  },
+  {
+    "id": 176,
+    "section": "Ecological & Economic Importance",
+    "question": "Indiscriminate capture and killing of frogs can lead to:",
+    "options": [
+      "A sharp increase in agricultural insect pest populations and crop damage",
+      "Complete extinction of birds of prey",
+      "Decrease in pond algal blooms",
+      "Improvement in freshwater quality"
+    ],
+    "answer": 0,
+    "explanation": "Disrupting frog populations removes a natural biological pest control, leading to insect outbreaks and crop devastation."
+  },
+  {
+    "id": 177,
+    "section": "Reproductive System & Development",
+    "question": "During amplexus, the male frog sheds sperms while the female sheds ova:",
+    "options": [
+      "On land in burrows",
+      "Simultaneously into the water",
+      "Inside the male's vocal sacs",
+      "Inside the female's stomach"
+    ],
+    "answer": 1,
+    "explanation": "During amplexus, eggs and sperms are released simultaneously into water where fertilization occurs externally."
+  },
+  {
+    "id": 178,
+    "section": "Reproductive System & Development",
+    "question": "The mass of fertilized eggs floating in water surrounded by a protective jelly-like sheath is called:",
+    "options": [
+      "Cocoon",
+      "Spawn",
+      "Blastula",
+      "Cyst"
+    ],
+    "answer": 1,
+    "explanation": "Frog eggs laid in water surrounded by mucilaginous protective jelly are collectively called spawn."
+  },
+  {
+    "id": 179,
+    "section": "Taxonomy & Anatomy Synthesis",
+    "question": "Which of the following combinations correctly matches the organ in Rana tigrina with its structural characteristic?",
+    "options": [
+      "Heart - 4 chambers (2 atria, 2 ventricles)",
+      "Testes - Attached to kidneys via mesorchium",
+      "Tongue - Unilobed, attached at the back of throat",
+      "Erythrocytes - Circular, enucleated like mammals"
+    ],
+    "answer": 1,
+    "explanation": "Testes are attached to the upper part of kidneys via the double fold of peritoneum called mesorchium."
+  },
+  {
+    "id": 180,
+    "section": "Taxonomy & Anatomy Synthesis",
+    "question": "Which of the following is a TRUE statement summarizing the morphological and anatomical traits of Rana tigrina?",
+    "options": [
+      "Adult frogs drink water and have 12 pairs of cranial nerves",
+      "Frogs are poikilothermic, ureotelic, possess a 3-chambered heart, and show indirect development through a tadpole larva",
+      "Male frogs have oviducts connected to Bidder's canal",
+      "Females have vocal sacs and copulatory pads on the forelimb digits"
+    ],
+    "answer": 1,
+    "explanation": "Rana tigrina is poikilothermic, ureotelic, has a 3-chambered heart (2 atria, 1 ventricle), nucleated RBCs, and undergoes indirect development via an aquatic tadpole larva."
+  }
+];
+
+    let userAnswers = {}; // id -> chosen option index (0..3)
+    let currentFilter = "ALL";
+    let filteredList = [...questionsData];
+    let currentIndex = 0; // 0-based index in filteredList
+    let isSingleView = true;
+    let timerSeconds = 0;
+    let timerInterval = null;
+
+    // Initialize
+    window.addEventListener("DOMContentLoaded", () => {
+      startTimer();
+      renderQuiz();
+      renderMatrix();
+      updateDashboard();
+    });
+
+    function startTimer() {
+      timerInterval = setInterval(() => {
+        timerSeconds++;
+        const mins = String(Math.floor(timerSeconds / 60)).padStart(2, '0');
+        const secs = String(timerSeconds % 60).padStart(2, '0');
+        document.getElementById("quiz-timer").innerText = `${mins}:${secs}`;
+      }, 1000);
+    }
+
+    function filterSection(sectionName) {
+      currentFilter = sectionName;
+      if (sectionName === "ALL") {
+        filteredList = [...questionsData];
+      } else {
+        filteredList = questionsData.filter(q => q.section === sectionName || q.section.includes(sectionName));
+      }
+      currentIndex = 0;
+
+      // Update pill states
+      document.querySelectorAll(".filter-pill").forEach(btn => {
+        if (btn.innerText.includes("All") && sectionName === "ALL") {
+          btn.classList.add("active");
+        } else if (btn.innerText === sectionName || sectionName.includes(btn.innerText)) {
+          btn.classList.add("active");
+        } else {
+          btn.classList.remove("active");
+        }
+      });
+
+      // Update select dropdown
+      document.getElementById("section-filter").value = sectionName;
+
+      renderQuiz();
+    }
+
+    function toggleViewMode() {
+      isSingleView = !isSingleView;
+      document.getElementById("view-mode-btn").innerText = isSingleView ? "View: Single Question" : "View: All Questions";
+      document.getElementById("pagination-controls").style.display = isSingleView ? "flex" : "none";
+      renderQuiz();
+    }
+
+    function renderQuiz() {
+      const container = document.getElementById("quiz-container");
+      container.innerHTML = "";
+
+      document.getElementById("total-visible-q").innerText = filteredList.length;
+
+      if (filteredList.length === 0) {
+        container.innerHTML = "<div class='question-card' style='text-align:center;'>No questions found for this filter.</div>";
+        return;
+      }
+
+      if (isSingleView) {
+        document.getElementById("pagination-controls").style.display = "flex";
+        document.getElementById("current-q-idx").innerText = currentIndex + 1;
+        const q = filteredList[currentIndex];
+        container.appendChild(createQuestionCard(q, currentIndex + 1));
+        
+        // Disable/enable pagination buttons
+        document.getElementById("prev-btn").disabled = (currentIndex === 0);
+        document.getElementById("next-btn").disabled = (currentIndex === filteredList.length - 1);
+      } else {
+        document.getElementById("pagination-controls").style.display = "none";
+        document.getElementById("current-q-idx").innerText = `1-${filteredList.length}`;
+        filteredList.forEach((q, idx) => {
+          container.appendChild(createQuestionCard(q, idx + 1));
+        });
+      }
+    }
+
+    function createQuestionCard(q, displayIdx) {
+      const card = document.createElement("div");
+      card.className = "question-card";
+      card.id = `q-card-${q.id}`;
+
+      const chosen = userAnswers[q.id];
+      const isAnswered = chosen !== undefined;
+
+      const letters = ["A", "B", "C", "D"];
+
+      let optionsHtml = "";
+      q.options.forEach((opt, oIdx) => {
+        let btnClasses = "option-btn";
+        if (isAnswered) {
+          btnClasses += " disabled";
+          if (oIdx === q.answer) {
+            btnClasses += " reveal-correct";
+          }
+          if (chosen === oIdx) {
+            btnClasses += (oIdx === q.answer) ? " selected-correct" : " selected-wrong";
+          }
+        }
+
+        optionsHtml += `
+          <button class="${btnClasses}" onclick="selectAnswer(${q.id}, ${oIdx})" ${isAnswered ? 'disabled' : ''}>
+            <span class="option-letter">${letters[oIdx]}</span>
+            <span>${escapeHtml(opt)}</span>
+          </button>
+        `;
+      });
+
+      const explDisplay = isAnswered ? "display: block;" : "display: none;";
+
+      card.innerHTML = `
+        <div class="question-meta">
+          <span class="q-number-badge">Question #${q.id}</span>
+          <span class="q-section-badge">${escapeHtml(q.section)}</span>
+        </div>
+        <div class="question-text">${escapeHtml(q.question)}</div>
+        <div class="options-grid">
+          ${optionsHtml}
+        </div>
+        <div class="explanation-box ${isAnswered ? 'visible' : ''}" style="${explDisplay}">
+          <div class="explanation-title">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+            NCERT Concept & Explanation
+          </div>
+          <div>${escapeHtml(q.explanation)}</div>
+        </div>
+      `;
+
+      return card;
+    }
+
+    function selectAnswer(qId, selectedOpt) {
+      if (userAnswers[qId] !== undefined) return; // already answered
+
+      userAnswers[qId] = selectedOpt;
+
+      updateDashboard();
+      renderMatrix();
+
+      // Update the card UI
+      const card = document.getElementById(`q-card-${qId}`);
+      if (card) {
+        const q = questionsData.find(item => item.id === qId);
+        const replacement = createQuestionCard(q, currentIndex + 1);
+        card.replaceWith(replacement);
+      }
+    }
+
+    function prevQuestion() {
+      if (currentIndex > 0) {
+        currentIndex--;
+        renderQuiz();
+        window.scrollTo({top: 180, behavior: 'smooth'});
+      }
+    }
+
+    function nextQuestion() {
+      if (currentIndex < filteredList.length - 1) {
+        currentIndex++;
+        renderQuiz();
+        window.scrollTo({top: 180, behavior: 'smooth'});
+      }
+    }
+
+    function updateDashboard() {
+      const answeredKeys = Object.keys(userAnswers);
+      const answeredCount = answeredKeys.length;
+
+      let correctCount = 0;
+      let wrongCount = 0;
+
+      answeredKeys.forEach(id => {
+        const q = questionsData.find(item => item.id === parseInt(id));
+        if (q && userAnswers[id] === q.answer) {
+          correctCount++;
+        } else {
+          wrongCount++;
+        }
+      });
+
+      document.getElementById("stat-answered").innerText = answeredCount;
+      document.getElementById("stat-correct").innerText = correctCount;
+      document.getElementById("stat-wrong").innerText = wrongCount;
+
+      const accuracy = answeredCount > 0 ? Math.round((correctCount / answeredCount) * 100) : 0;
+      document.getElementById("stat-score").innerText = `${accuracy}%`;
+    }
+
+    function renderMatrix() {
+      const matrix = document.getElementById("question-matrix");
+      matrix.innerHTML = "";
+
+      questionsData.forEach((q, idx) => {
+        const btn = document.createElement("button");
+        btn.className = "matrix-btn";
+        btn.innerText = q.id;
+
+        const ans = userAnswers[q.id];
+        if (ans !== undefined) {
+          if (ans === q.answer) {
+            btn.classList.add("answered-correct");
+          } else {
+            btn.classList.add("answered-wrong");
+          }
+        }
+
+        if (filteredList[currentIndex] && filteredList[currentIndex].id === q.id) {
+          btn.classList.add("current");
+        }
+
+        btn.onclick = () => {
+          jumpToQuestion(q.id);
+          closeGridModal();
+        };
+
+        matrix.appendChild(btn);
+      });
+    }
+
+    function jumpToQuestion(qId) {
+      const q = questionsData.find(item => item.id === qId);
+      if (!q) return;
+
+      if (currentFilter !== "ALL" && !q.section.includes(currentFilter)) {
+        filterSection("ALL");
+      }
+
+      const foundIdx = filteredList.findIndex(item => item.id === qId);
+      if (foundIdx !== -1) {
+        currentIndex = foundIdx;
+        renderQuiz();
+        if (!isSingleView) {
+          const el = document.getElementById(`q-card-${qId}`);
+          if (el) el.scrollIntoView({behavior: "smooth", block: "center"});
+        } else {
+          window.scrollTo({top: 180, behavior: 'smooth'});
+        }
+      }
+    }
+
+    function resetQuiz() {
+      if (confirm("Are you sure you want to reset all answers and restart the quiz?")) {
+        userAnswers = {};
+        currentIndex = 0;
+        timerSeconds = 0;
+        updateDashboard();
+        renderMatrix();
+        renderQuiz();
+      }
+    }
+
+    function openGridModal() {
+      renderMatrix();
+      document.getElementById("gridModal").classList.add("open");
+    }
+
+    function closeGridModal() {
+      document.getElementById("gridModal").classList.remove("open");
+    }
+
+    function closeGridModalOnBackdrop(e) {
+      if (e.target.id === "gridModal") {
+        closeGridModal();
+      }
+    }
+
+    function escapeHtml(text) {
+      if (!text) return "";
+      return String(text)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+  </script>
+</body>
+</html>
